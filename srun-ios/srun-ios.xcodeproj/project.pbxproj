@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2225F475EF2D4859509B2811 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */; };
 		28100F4A1F4C2E6A005AB5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F491F4C2E6A005AB5F8 /* AppDelegate.swift */; };
 		28100F4C1F4C2E6A005AB5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F4B1F4C2E6A005AB5F8 /* ViewController.swift */; };
 		28100F4F1F4C2E6A005AB5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		28100F571F4C2E6A005AB5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28100F551F4C2E6A005AB5F8 /* LaunchScreen.storyboard */; };
 		28100F621F4C2E6A005AB5F8 /* srun_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F611F4C2E6A005AB5F8 /* srun_iosTests.swift */; };
 		28100F6D1F4C2E6A005AB5F8 /* srun_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */; };
+		28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F7B1F4E922A005AB5F8 /* webViewController.swift */; };
 		F25CB9838D6F3E012B3B26D9 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +52,12 @@
 		28100F681F4C2E6A005AB5F8 /* srun-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "srun-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srun_iosUITests.swift; sourceTree = "<group>"; };
 		28100F6E1F4C2E6A005AB5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28100F7B1F4E922A005AB5F8 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BCCCA124A6C4013A29EC23 /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
 		7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
+		F6A998619C560AD06F608511 /* Pods-srun-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		FED0846DC94391A5521F0424 /* Pods-srun-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25CB9838D6F3E012B3B26D9 /* Pods_srun_ios.framework in Frameworks */,
+				2225F475EF2D4859509B2811 /* Pods_srun_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,11 +98,30 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		0FEDCB43B3A8B9023C7E8463 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1221AE8B68AC71C6605DA6A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6A998619C560AD06F608511 /* Pods-srun-ios.debug.xcconfig */,
+				91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		28100F3D1F4C2E6A005AB5F8 = {
 			isa = PBXGroup;
 			children = (
 				28100F481F4C2E6A005AB5F8 /* srun-ios */,
 				28100F7A1F4C300B005AB5F8 /* Supporting Files */,
+				1221AE8B68AC71C6605DA6A7 /* Pods */,
+				0FEDCB43B3A8B9023C7E8463 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				28100F4B1F4C2E6A005AB5F8 /* ViewController.swift */,
+				28100F7B1F4E922A005AB5F8 /* webViewController.swift */,
 				28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */,
 				28100F531F4C2E6A005AB5F8 /* Assets.xcassets */,
 			);
@@ -144,12 +171,12 @@
 				28100F601F4C2E6A005AB5F8 /* srun-iosTests */,
 				28100F6B1F4C2E6A005AB5F8 /* srun-iosUITests */,
 				28100F471F4C2E6A005AB5F8 /* Products */,
-				05C18CB57E061749E3502EB6 /* Pods */,
-				E92690197ADB3556CB8816F1 /* Frameworks */,
 				28100F491F4C2E6A005AB5F8 /* AppDelegate.swift */,
 				28100F551F4C2E6A005AB5F8 /* LaunchScreen.storyboard */,
 				28100F581F4C2E6A005AB5F8 /* Info.plist */,
 				28100F501F4C2E6A005AB5F8 /* srun_ios.xcdatamodeld */,
+				05C18CB57E061749E3502EB6 /* Pods */,
+				E92690197ADB3556CB8816F1 /* Frameworks */,
 			);
 			name = "Supporting Files";
 			path = "srun-ios";
@@ -355,6 +382,7 @@
 				28100F4C1F4C2E6A005AB5F8 /* ViewController.swift in Sources */,
 				28100F4A1F4C2E6A005AB5F8 /* AppDelegate.swift in Sources */,
 				28100F521F4C2E6A005AB5F8 /* srun_ios.xcdatamodeld in Sources */,
+				28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
