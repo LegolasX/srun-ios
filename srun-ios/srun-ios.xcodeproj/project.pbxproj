@@ -17,6 +17,13 @@
 		28100F621F4C2E6A005AB5F8 /* srun_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F611F4C2E6A005AB5F8 /* srun_iosTests.swift */; };
 		28100F6D1F4C2E6A005AB5F8 /* srun_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */; };
 		28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F7B1F4E922A005AB5F8 /* webViewController.swift */; };
+		2816F1851F60D25B00B83ABD /* SummerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816F1841F60D25B00B83ABD /* SummerTextField.swift */; };
+		2816F1871F60D4F900B83ABD /* bk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2816F1861F60D4F900B83ABD /* bk.jpg */; };
+		2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */; };
+		2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */; };
+		2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */; };
+		2834AC411F5E98F100C5EEC5 /* LRSrunManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */; };
+		2834AC431F5E9A8C00C5EEC5 /* LRFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */; };
 		F25CB9838D6F3E012B3B26D9 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +60,13 @@
 		28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srun_iosUITests.swift; sourceTree = "<group>"; };
 		28100F6E1F4C2E6A005AB5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28100F7B1F4E922A005AB5F8 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		2816F1841F60D25B00B83ABD /* SummerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummerTextField.swift; sourceTree = "<group>"; };
+		2816F1861F60D4F900B83ABD /* bk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bk.jpg; sourceTree = "<group>"; };
+		2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostButton.swift; sourceTree = "<group>"; };
+		2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickMacro.swift; sourceTree = "<group>"; };
+		2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRSrunManger.swift; sourceTree = "<group>"; };
+		2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRFire.swift; sourceTree = "<group>"; };
 		71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BCCCA124A6C4013A29EC23 /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
 		7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,9 +153,16 @@
 		28100F481F4C2E6A005AB5F8 /* srun-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */,
 				28100F4B1F4C2E6A005AB5F8 /* ViewController.swift */,
+				2816F1841F60D25B00B83ABD /* SummerTextField.swift */,
+				2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */,
 				28100F7B1F4E922A005AB5F8 /* webViewController.swift */,
 				28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */,
+				2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */,
+				2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */,
+				2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */,
+				2816F1861F60D4F900B83ABD /* bk.jpg */,
 				28100F531F4C2E6A005AB5F8 /* Assets.xcassets */,
 			);
 			path = "srun-ios";
@@ -306,6 +327,7 @@
 			files = (
 				28100F571F4C2E6A005AB5F8 /* LaunchScreen.storyboard in Resources */,
 				28100F541F4C2E6A005AB5F8 /* Assets.xcassets in Resources */,
+				2816F1871F60D4F900B83ABD /* bk.jpg in Resources */,
 				28100F4F1F4C2E6A005AB5F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,8 +401,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2816F1851F60D25B00B83ABD /* SummerTextField.swift in Sources */,
 				28100F4C1F4C2E6A005AB5F8 /* ViewController.swift in Sources */,
 				28100F4A1F4C2E6A005AB5F8 /* AppDelegate.swift in Sources */,
+				2834AC431F5E9A8C00C5EEC5 /* LRFire.swift in Sources */,
+				2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */,
+				2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */,
+				2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */,
+				2834AC411F5E98F100C5EEC5 /* LRSrunManger.swift in Sources */,
 				28100F521F4C2E6A005AB5F8 /* srun_ios.xcdatamodeld in Sources */,
 				28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */,
 			);

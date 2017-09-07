@@ -4,5 +4,6 @@ target ‘srun-ios’ do
     pod 'Alamofire', '~> 4.4'
     pod 'SnapKit', '~> 3.0'
     pod "SwiftSpinner"
+    pod 'Reveal-SDK', :configurations => ['Debug']
 end
 
