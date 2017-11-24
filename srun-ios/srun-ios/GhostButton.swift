@@ -23,15 +23,12 @@ class GhostButton: UIButton {
         layer.cornerRadius = 4
         layer.masksToBounds = true
         clipsToBounds = true
-        print(frame)
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.colors = [RGBCOLOR(r: 70, 75, 80).cgColor, UIColor.lrBlack.cgColor]
         layer.addSublayer(gradientLayer)
-        
-        
     }
 
 }

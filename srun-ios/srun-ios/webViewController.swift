@@ -19,7 +19,7 @@ class webViewController: UIViewController, UIScrollViewDelegate, WKNavigationDel
     }()
     var userName : String?
     var password : String?
-    
+    let containerView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(webView)
@@ -30,8 +30,8 @@ class webViewController: UIViewController, UIScrollViewDelegate, WKNavigationDel
         let request = URLRequest(url:URL(string:"http://self.ncepu.edu.cn:8800")!)
         webView.scrollView.addObserver(self, forKeyPath: #keyPath(UIScrollView.contentSize), options: (NSKeyValueObservingOptions.new), context: nil)
         webView.load(request)
-        let containerView = UIView()
         self.view.addSubview(containerView)
+        
         SwiftSpinner.useContainerView(containerView)
         containerView.snp.makeConstraints { (m) in
             m.center.equalToSuperview()
@@ -84,6 +84,7 @@ class webViewController: UIViewController, UIScrollViewDelegate, WKNavigationDel
             hasRemoveKVO = true
             self.webView.scrollView.setContentOffset(CGPoint.init(x: 814, y: 135), animated: true)
             SwiftSpinner.hide()
+            containerView.removeFromSuperview()
             fillInBlack()
         }
         guard newSize.width == UIScreen.main.bounds.width && webView.isLoading == false else { return }

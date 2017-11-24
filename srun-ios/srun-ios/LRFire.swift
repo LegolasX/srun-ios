@@ -31,11 +31,13 @@ private func request(url: String,
     }
     Alamofire.request(url, method: method, parameters: params, headers: headers).responseData { (response) in
         guard response.result.isSuccess != false else {
-            //                self.myPrint("Error: \(String(describing: response.error))")
+                            print("Error: \(String(describing: response.error))")
+            //TODO: fix this error showing 
+            //Optional(Error Domain=NSURLErrorDomain Code=-1004 "Could not connect to the server." UserInfo={NSUnderlyingError=0x170243cf0 {Error Domain=kCFErrorDomainCFNetwork Code=-1004 "(null)" UserInfo={_kCFStreamErrorCodeKey=64, _kCFStreamErrorDomainKey=1}}, NSErrorFailingURLStringKey=http://202.204.67.15:3333/cgi-bin/do_login, NSErrorFailingURLKey=http://202.204.67.15:3333/cgi-bin/do_login, _kCFStreamErrorDomainKey=1, _kCFStreamErrorCodeKey=64, NSLocalizedDescription=Could not connect to the server.})
             return
         }
-        //            self.myPrint("Request: \(String(describing: response.request))")
-        //            self.myPrint("Response: \(String(describing: response.response))")
+                   // print("Request: \(String(describing: response.request))")
+                    //print("Response: \(String(describing: response.response))")
         handler(response)
     }
 }

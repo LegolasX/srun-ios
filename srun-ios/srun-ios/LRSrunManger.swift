@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import UIKit
 final class LRSrunManger: NSObject {
     
     
     static let shared = LRSrunManger()
     private override init() {}
-    
     
     var params : [String: Any] {
         get {
@@ -46,9 +44,9 @@ final class LRSrunManger: NSObject {
         
     }
     struct urlStrings {
-        static let loginURL = ipPort  + "do_login"
+        static let loginURL = ipPort  + "do_login/"
         static let forceLogoutURL = ipPort  + "force_logout"
-        static let logoutURL = ipPort  + "do_logout"
+        static let logoutURL = ipPort  + "do_logout/"
         static let statusURL = ipPort  + "keeplive"
     }
     
@@ -84,7 +82,7 @@ final class LRSrunManger: NSObject {
             case .passwordError : return "密码错误"
             case .statusError : return "用户已欠费，请尽快充值。"
             case .availableError : return "用户已禁用"
-            case .ipExistError : return "您的IP尚未下线，请等待2分钟再试。"
+            case .ipExistError : return "您的IP尚未下线，请等待十几秒再试。"
             case .userNumError : return "用户数已达上限"
             case .onlinenumError : return "该帐号的登录人数已超过限额\n如果怀疑帐号被盗用，请联系管理员。"
             case .modeError : return "系统已禁止WEB方式登录，请使用客户端"
@@ -101,10 +99,11 @@ final class LRSrunManger: NSObject {
     }
     
         
-        func logout() {
+        func logout(messageHandler:@escaping ((String) -> Void)) {
             getRequest(url: urlStrings.logoutURL, with: nil) { (response) in
                 guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
                 print(utf8Text)
+                messageHandler(utf8Text)
             }
             
         }
@@ -115,32 +114,38 @@ final class LRSrunManger: NSObject {
                 print(utf8Text)
             }
         }
-        
-    func login(userName user:String, password:String) {
-            postRequest(url: urlStrings.loginURL, with: params, success: { response in
-                guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
-                let parts = utf8Text.components(separatedBy: "@")
-                guard parts.count == 2, let newTimeStamp = Int(parts[1]) else {
-                    print(utf8Text) // 如果返回不是由@分开，有两个部分 那么就是登陆错误 log一下 然后退出
-                    return
-                }
-                if utf8Text.components(separatedBy: ",").count == 5 {
-                    print("login success") //如果由,分割成5个 就是登陆成功 也log 然后退出
-                    return
-                }
-                //到了这里 就是密码错误了 可能是因为密码错误 也可能是服务器傻逼
-                //TODO: 记得处理真的是密码错误的情况
-                print("server timeStamp: (newTimeStamp)")
-                var newParameters = self.params
+    //TODO: password_error@1506253957 代表密码错误
+    //TODO: 83966610641355,1969612396389466113,0,0,0 校园网崩溃
+    //TODO: 奔溃状况下的登录成功 83966610641355,1969612396389466113,0,0,1508601600
+    
+    func loginB(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
+        if retryTime == 0 { return }
+        let defaults = UserDefaults.standard
+        defaults.set(user, forKey: "username")
+        defaults.set(password, forKey: "password")
+        var params = self.params;
+        params["password"] = encrypt(with: password, by: self.timeStamp)
+        params["username"] = user
+        postRequest(url: urlStrings.loginURL, with: params, success: { response in
+            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+            print(utf8Text)
+            if utf8Text.components(separatedBy: ",").count == 5 {
+                print("login success") //如果由,分割成5个 就是登陆成功 也log 然后退出
+                messageHandler("登陆成功！")
+                return
+            }
+            let state = SrunState(rawValue: utf8Text)
+            if let stateString = state {
+                messageHandler(stateString.stateString)
+            }
+            let parts = utf8Text.components(separatedBy: "@")
+            if parts.count == 2, let newTimeStamp = Int(parts[1])  {
+                print("server timeStamp: \(newTimeStamp)")
                 self.stampDifference = self.lastStamp! - newTimeStamp
-                newParameters["password"] = self.encrypt(with: password, by:self.timeStamp)
-                postRequest(url: urlStrings.loginURL, with: newParameters, success: { (data) in
-                    guard let anotherData = data.data, let anotherUtf8Text = String(data: anotherData, encoding: .utf8)  else { return }
-                    print("\(anotherUtf8Text)")
-                    print("login success")
-                })
-            })
-        }
+                    self.loginB(userName: user, password:password, retryTime: retryTime-1, messageHandler: messageHandler)
+            }
+        })
+    }
         
         private func encrypt(with password: String, by timeStamp: Int) -> String {
             var string =  ""

@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import WebKit
 class ViewController: UIViewController, UITextFieldDelegate{
-    @IBOutlet weak var userNameLabel: UITextField!
-    @IBOutlet weak var passwordLabel: UITextField!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var userNameLabel: SummerTextField!
+    @IBOutlet weak var passwordLabel: SummerTextField!
 //    @IBOutlet weak var consoleView: UITextView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
@@ -19,29 +20,48 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     // 629 - 649
     var passWord : String  {
-        return passwordLabel.text == "" ? "li777qing" : passwordLabel.text!
+        return passwordLabel.text ?? ""
     }
     
     var userName : String {
-        return userNameLabel.text == "" ? "1141250201" : userNameLabel.text!
+        return userNameLabel.text ?? ""
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.delegate = self
         passwordLabel.delegate = self
+        navigationController?.navigationBar.tintColor = UIColor.red
+        navigationController?.navigationBar.subviews[1].alpha = 0
         
+        let defaults = UserDefaults.standard
+        if let pass = defaults.value(forKey: "password") as? String {
+            passwordLabel.text = pass
+        }
+        if let user = defaults.value(forKey: "username") as? String {
+            userNameLabel.text = user
+        }
+        passwordLabel.attributedPlaceholder = NSAttributedString.init(string:"密码", attributes: [
+            NSForegroundColorAttributeName:UIColor.white])
+        userNameLabel.attributedPlaceholder = NSAttributedString.init(string:"学号", attributes: [
+            NSForegroundColorAttributeName:UIColor.white])
     }
     
     @IBAction func backgroundTaped(_ sender: UIControl) {
         self.view.endEditing(true)
     }
     @IBAction func login(_ sender: UIButton) {
-        LRSrunManger.shared.login(userName: self.userName, password: self.passWord)
+        weak var weak_self = self
+        LRSrunManger.shared.loginB(userName: userName, password: passWord, retryTime: 3) { stateString in
+            weak_self?.stateLabel.text = stateString
+        }
     }
     
     @IBAction func logout(_ sender: UIButton) {
-        LRSrunManger.shared.logout()
+        weak var weak_self = self
+        LRSrunManger.shared.logout{ stateString in
+            weak_self?.stateLabel.text = stateString
+        }
     }
     
     @IBAction func status(_ sender: UIButton) {
@@ -49,11 +69,24 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder();
+        textField.resignFirstResponder()
+        weak var weak_self = self
         if (textField == passwordLabel) {
-            LRSrunManger.shared.login(userName: self.userName, password: self.passWord)
+            LRSrunManger.shared.loginB(userName: userName, password: passWord, retryTime: 3) { stateString in
+                weak_self?.stateLabel.text = stateString
+            }
         }
-        return true;
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        return true
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
