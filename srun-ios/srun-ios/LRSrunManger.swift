@@ -16,8 +16,6 @@ final class LRSrunManger: NSObject {
     var params : [String: Any] {
         get {
             return [
-                //                "username": self.userName,
-                //                "password": self.encrypt(with:self.passWord, by: self.timeStamp),
                 "drop":"0",
                 "type":"10",
                 "n":"117",
@@ -105,8 +103,14 @@ final class LRSrunManger: NSObject {
                 print(utf8Text)
                 messageHandler(utf8Text)
             }
-            
         }
+    
+//    func ping() {
+//        getRequest(url: LRSrunManger.selfServiceURLs.indexURL, with: nil) { (response) in
+//            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+//            print(utf8Text)
+//        }
+//    }
         
         func status() {
             getRequest(url: urlStrings.statusURL, with: nil) { (response) in

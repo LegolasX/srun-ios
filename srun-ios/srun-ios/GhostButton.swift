@@ -17,6 +17,29 @@ class GhostButton: UIButton {
         // Drawing code
     }
     */
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        setTitleColor(UIColor.white, for: .normal)
+//        layer.cornerRadius = 4
+//        layer.masksToBounds = true
+//        clipsToBounds = true
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = bounds
+//        gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
+//        gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)
+//        gradientLayer.colors = [RGBCOLOR(r: 70, 75, 80).cgColor, UIColor.lrBlack.cgColor]
+//        layer.addSublayer(gradientLayer)
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
+//
+//    convenience init() {
+//        self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setTitleColor(UIColor.white, for: .normal)
@@ -25,10 +48,15 @@ class GhostButton: UIButton {
         clipsToBounds = true
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
+        print(bounds)
         gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.colors = [RGBCOLOR(r: 70, 75, 80).cgColor, UIColor.lrBlack.cgColor]
         layer.addSublayer(gradientLayer)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
 }

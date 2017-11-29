@@ -18,7 +18,6 @@
 		28100F6D1F4C2E6A005AB5F8 /* srun_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */; };
 		28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F7B1F4E922A005AB5F8 /* webViewController.swift */; };
 		2816F1851F60D25B00B83ABD /* SummerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816F1841F60D25B00B83ABD /* SummerTextField.swift */; };
-		2816F1871F60D4F900B83ABD /* bk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2816F1861F60D4F900B83ABD /* bk.jpg */; };
 		2816F1891F60D80700B83ABD /* MymeriaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816F1881F60D80700B83ABD /* MymeriaExtension.swift */; };
 		2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */; };
 		2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */; };
@@ -62,7 +61,6 @@
 		28100F6E1F4C2E6A005AB5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28100F7B1F4E922A005AB5F8 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		2816F1841F60D25B00B83ABD /* SummerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummerTextField.swift; sourceTree = "<group>"; };
-		2816F1861F60D4F900B83ABD /* bk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bk.jpg; sourceTree = "<group>"; };
 		2816F1881F60D80700B83ABD /* MymeriaExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MymeriaExtension.swift; sourceTree = "<group>"; };
 		2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostButton.swift; sourceTree = "<group>"; };
 		2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				28100F7B1F4E922A005AB5F8 /* webViewController.swift */,
 				2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */,
 				2816F18A1F60D81100B83ABD /* Extensions */,
-				2816F1861F60D4F900B83ABD /* bk.jpg */,
 				28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */,
 				28100F531F4C2E6A005AB5F8 /* Assets.xcassets */,
 			);
@@ -338,7 +335,6 @@
 			files = (
 				28100F571F4C2E6A005AB5F8 /* LaunchScreen.storyboard in Resources */,
 				28100F541F4C2E6A005AB5F8 /* Assets.xcassets in Resources */,
-				2816F1871F60D4F900B83ABD /* bk.jpg in Resources */,
 				28100F4F1F4C2E6A005AB5F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		36301DD3877E0A9BB05FD702 /* [CP] Copy Pods Resources */ = {
@@ -593,14 +589,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
 				INFOPLIST_FILE = "srun-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Legolas.Invoker.srun-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -613,14 +609,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
 				INFOPLIST_FILE = "srun-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Legolas.Invoker.srun-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

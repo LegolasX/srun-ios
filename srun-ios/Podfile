@@ -1,9 +1,9 @@
-platform :ios, '10.0'
+platform :ios, '9.0'
 use_frameworks!
 target ‘srun-ios’ do
     pod 'Alamofire', '~> 4.4'
-    pod 'SnapKit', '~> 3.0'
-    pod "SwiftSpinner"
+  # pod 'SnapKit', '~> 3.0'
+  # pod "SwiftSpinner"
     pod 'Reveal-SDK', :configurations => ['Debug']
+    pod 'ReachabilitySwift'
 end
-
