@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>srun-ios.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<false/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>CFA4913A6245084DE79D2B500EF209D338254561</string>
+				<key>dateExpires</key>
+				<string>2018/11/23</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>bitcode</key>
+					<false/>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>CFA4913A6245084DE79D2B500EF209D338254561</string>
+						<key>dateExpires</key>
+						<string>2018/11/23</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Alamofire.framework</string>
+					<key>symbols</key>
+					<false/>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>RHBBUXEY37</string>
+						<key>name</key>
+						<string>JING CHANG</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>bitcode</key>
+					<false/>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>CFA4913A6245084DE79D2B500EF209D338254561</string>
+						<key>dateExpires</key>
+						<string>2018/11/23</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Reachability.framework</string>
+					<key>symbols</key>
+					<false/>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>RHBBUXEY37</string>
+						<key>name</key>
+						<string>JING CHANG</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>RHBBUXEY37.com.Legolas.Invoker.srun-ios</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>RHBBUXEY37</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>RHBBUXEY37.com.Legolas.Invoker.srun-ios</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>srun-ios.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>72ca8ca9-f32c-4a71-839a-32f99fe500f4</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: com.Legolas.Invoker.srun-ios</string>
+			</dict>
+			<key>symbols</key>
+			<false/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>RHBBUXEY37</string>
+				<key>name</key>
+				<string>JING CHANG</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

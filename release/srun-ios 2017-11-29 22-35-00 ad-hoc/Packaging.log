@@ -1,0 +1,437 @@
+2017-11-29 14:34:06 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fd095b66a60; archive(resolved)='<IDEArchive: 0x7fd0946e8100>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team(resolved)='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fd095b66a60; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fd096a8fd20; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd095d1a2f0; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd096aed3f0; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd0a6c24200; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd096b450e0; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd095b65050; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd096a8a750; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd09459cf20; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='<IDEProvisioningBasicTeam 0x7fd095f6ae30: teamID: RHBBUXEY37, teamName: JING CHANG>'>
+	<IDEDistributionContext: 0x7fd095da3050; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='<IDEDistributionMethodAdHoc: 0x7fd0c393c4c0>', team='(null)'>
+	<IDEDistributionContext: 0x7fd095b53270; archive = '<IDEArchive: 0x7fd0946e8100>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fd095b66a60>
+2017-11-29 14:34:06 +0000  Processing step: IDEDistributionCreateDestRootStep
+2017-11-29 14:34:06 +0000  Processing step: IDEDistributionCopyItemStep
+2017-11-29 14:34:07 +0000  Running /usr/bin/ditto '-V' '/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app'
+2017-11-29 14:34:07 +0000  >>> Copying /Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app 
+2017-11-29 14:34:07 +0000  
+2017-11-29 14:34:07 +0000  copying file ./_CodeSignature/CodeResources ... 
+2017-11-29 14:34:07 +0000  15823 bytes for ./_CodeSignature/CodeResources
+2017-11-29 14:34:07 +0000  copying file ./AppIcon20x20@2x.png ... 
+2017-11-29 14:34:07 +0000  8196 bytes for ./AppIcon20x20@2x.png
+copying file ./AppIcon20x20@3x.png ... 
+2017-11-29 14:34:07 +0000  12128 bytes for ./AppIcon20x20@3x.png
+2017-11-29 14:34:07 +0000  copying file ./AppIcon29x29@2x.png ... 
+2017-11-29 14:34:07 +0000  11699 bytes for ./AppIcon29x29@2x.png
+copying file ./AppIcon29x29@3x.png ... 
+2017-11-29 14:34:07 +0000  19473 bytes for ./AppIcon29x29@3x.png
+2017-11-29 14:34:07 +0000  copying file ./AppIcon40x40@2x.png ... 
+2017-11-29 14:34:07 +0000  17471 bytes for ./AppIcon40x40@2x.png
+2017-11-29 14:34:07 +0000  copying file ./AppIcon40x40@3x.png ... 
+2017-11-29 14:34:07 +0000  30957 bytes for ./AppIcon40x40@3x.png
+2017-11-29 14:34:07 +0000  copying file ./AppIcon60x60@2x.png ... 
+2017-11-29 14:34:07 +0000  30957 bytes for ./AppIcon60x60@2x.png
+2017-11-29 14:34:07 +0000  copying file ./AppIcon60x60@3x.png ... 
+2017-11-29 14:34:07 +0000  59101 bytes for ./AppIcon60x60@3x.png
+2017-11-29 14:34:07 +0000  copying file ./archived-expanded-entitlements.xcent ... 
+2017-11-29 14:34:07 +0000  394 bytes for ./archived-expanded-entitlements.xcent
+copying file ./Assets.car ... 
+2017-11-29 14:34:07 +0000  1500728 bytes for ./Assets.car
+2017-11-29 14:34:07 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2017-11-29 14:34:07 +0000  1790 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2017-11-29 14:34:07 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2017-11-29 14:34:07 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2017-11-29 14:34:07 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2017-11-29 14:34:07 +0000  832 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2017-11-29 14:34:07 +0000  copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2017-11-29 14:34:07 +0000  351 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2017-11-29 14:34:07 +0000  copying file ./Base.lproj/Main.storyboardc/t9a-dv-O8G-view-XOi-rE-kwz.nib ... 
+2017-11-29 14:34:07 +0000  2152 bytes for ./Base.lproj/Main.storyboardc/t9a-dv-O8G-view-XOi-rE-kwz.nib
+copying file ./Base.lproj/Main.storyboardc/UINavigationController-J6S-sK-u9T.nib ... 
+2017-11-29 14:34:07 +0000  1980 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-J6S-sK-u9T.nib
+copying file ./Base.lproj/Main.storyboardc/UIViewController-t9a-dv-O8G.nib ... 
+2017-11-29 14:34:07 +0000  982 bytes for ./Base.lproj/Main.storyboardc/UIViewController-t9a-dv-O8G.nib
+copying file ./Base.lproj/Main.storyboardc/zr1-Ax-Jnh-view-bRx-bJ-Jkv.nib ... 
+2017-11-29 14:34:07 +0000  6241 bytes for ./Base.lproj/Main.storyboardc/zr1-Ax-Jnh-view-bRx-bJ-Jkv.nib
+2017-11-29 14:34:07 +0000  copying file ./embedded.mobileprovision ... 
+2017-11-29 14:34:07 +0000  9500 bytes for ./embedded.mobileprovision
+2017-11-29 14:34:07 +0000  copying file ./Frameworks/Alamofire.framework/_CodeSignature/CodeResources ... 
+2017-11-29 14:34:07 +0000  2202 bytes for ./Frameworks/Alamofire.framework/_CodeSignature/CodeResources
+2017-11-29 14:34:07 +0000  copying file ./Frameworks/Alamofire.framework/Alamofire ... 
+2017-11-29 14:34:07 +0000  7896064 bytes for ./Frameworks/Alamofire.framework/Alamofire
+2017-11-29 14:34:07 +0000  copying file ./Frameworks/Alamofire.framework/Info.plist ... 
+2017-11-29 14:34:07 +0000  737 bytes for ./Frameworks/Alamofire.framework/Info.plist
+2017-11-29 14:34:07 +0000  copying file ./Frameworks/libswiftCore.dylib ... 
+2017-11-29 14:34:08 +0000  68838896 bytes for ./Frameworks/libswiftCore.dylib
+2017-11-29 14:34:08 +0000  copying file ./Frameworks/libswiftCoreData.dylib ... 
+690512 bytes for ./Frameworks/libswiftCoreData.dylib
+copying file ./Frameworks/libswiftCoreFoundation.dylib ... 
+2017-11-29 14:34:08 +0000  257648 bytes for ./Frameworks/libswiftCoreFoundation.dylib
+copying file ./Frameworks/libswiftCoreGraphics.dylib ... 
+2017-11-29 14:34:08 +0000  1268800 bytes for ./Frameworks/libswiftCoreGraphics.dylib
+copying file ./Frameworks/libswiftCoreImage.dylib ... 
+2017-11-29 14:34:08 +0000  258224 bytes for ./Frameworks/libswiftCoreImage.dylib
+copying file ./Frameworks/libswiftDarwin.dylib ... 
+2017-11-29 14:34:08 +0000  599232 bytes for ./Frameworks/libswiftDarwin.dylib
+copying file ./Frameworks/libswiftDispatch.dylib ... 
+2017-11-29 14:34:08 +0000  2440688 bytes for ./Frameworks/libswiftDispatch.dylib
+copying file ./Frameworks/libswiftFoundation.dylib ... 
+2017-11-29 14:34:08 +0000  27922928 bytes for ./Frameworks/libswiftFoundation.dylib
+2017-11-29 14:34:08 +0000  copying file ./Frameworks/libswiftMetal.dylib ... 
+399328 bytes for ./Frameworks/libswiftMetal.dylib
+copying file ./Frameworks/libswiftObjectiveC.dylib ... 
+2017-11-29 14:34:08 +0000  505744 bytes for ./Frameworks/libswiftObjectiveC.dylib
+2017-11-29 14:34:08 +0000  copying file ./Frameworks/libswiftos.dylib ... 
+2017-11-29 14:34:08 +0000  446352 bytes for ./Frameworks/libswiftos.dylib
+2017-11-29 14:34:08 +0000  copying file ./Frameworks/libswiftQuartzCore.dylib ... 
+2017-11-29 14:34:08 +0000  310928 bytes for ./Frameworks/libswiftQuartzCore.dylib
+2017-11-29 14:34:08 +0000  copying file ./Frameworks/libswiftUIKit.dylib ... 
+2017-11-29 14:34:08 +0000  789136 bytes for ./Frameworks/libswiftUIKit.dylib
+2017-11-29 14:34:08 +0000  copying file ./Frameworks/Reachability.framework/_CodeSignature/CodeResources ... 
+2017-11-29 14:34:08 +0000  2202 bytes for ./Frameworks/Reachability.framework/_CodeSignature/CodeResources
+2017-11-29 14:34:08 +0000  copying file ./Frameworks/Reachability.framework/Info.plist ... 
+2017-11-29 14:34:08 +0000  743 bytes for ./Frameworks/Reachability.framework/Info.plist
+copying file ./Frameworks/Reachability.framework/Reachability ... 
+2017-11-29 14:34:08 +0000  681136 bytes for ./Frameworks/Reachability.framework/Reachability
+2017-11-29 14:34:08 +0000  copying file ./Info.plist ... 
+2017-11-29 14:34:08 +0000  1355 bytes for ./Info.plist
+2017-11-29 14:34:08 +0000  copying file ./PkgInfo ... 
+2017-11-29 14:34:08 +0000  8 bytes for ./PkgInfo
+copying file ./srun-ios ... 
+2017-11-29 14:34:08 +0000  1269264 bytes for ./srun-ios
+2017-11-29 14:34:08 +0000  copying file ./srun_ios.momd/srun_ios.mom ... 
+2017-11-29 14:34:08 +0000  513 bytes for ./srun_ios.momd/srun_ios.mom
+copying file ./srun_ios.momd/srun_ios.omo ... 
+2017-11-29 14:34:08 +0000  696 bytes for ./srun_ios.momd/srun_ios.omo
+2017-11-29 14:34:08 +0000  copying file ./srun_ios.momd/VersionInfo.plist ... 
+2017-11-29 14:34:08 +0000  153 bytes for ./srun_ios.momd/VersionInfo.plist
+2017-11-29 14:34:08 +0000  /usr/bin/ditto exited with 0
+2017-11-29 14:34:08 +0000  Processing step: IDEDistributionEmbedProfileStep
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd095d9d650 'org.cocoapods.Alamofire' '<DVTFilePath:0x7fd0ba462290:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Alamofire.framework'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd095d50b40 'org.cocoapods.Reachability' '<DVTFilePath:0x7fd095f63050:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Reachability.framework'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd095c07500 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fd0ac624bb0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCore.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd096bd4fc0 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fd0946cb470:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreData.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd096aca0c0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fd0944a24c0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd096aa0060 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fd0c1766f80:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd096b22d40 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fd0a6e2ca40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreImage.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd0b1ab9ed0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fd0b1afb550:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDarwin.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd0b0da5ab0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fd0ab211d40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDispatch.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd096ccd3f0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fd0a8d1d8b0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftFoundation.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd0b1a33640 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fd0c13cefd0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftMetal.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd095a8f480 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fd0b1add8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd096b1edf0 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fd0aea07aa0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd096aceab0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7fd0c22f99e0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftUIKit.dylib'>'>
+2017-11-29 14:34:08 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fd0b0952bf0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fd0c1526220:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftos.dylib'>'>
+2017-11-29 14:34:08 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2017-11-29 14:34:08 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2017-11-29 14:34:08 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2017-11-29 14:34:08 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2017-11-29 14:34:08 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2017-11-29 14:34:09 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2017-11-29 14:34:09 +0000  Processing step: IDEDistributionSymbolsStep
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-29 14:34:09 +0000  Processing step: IDEDistributionAppThinningStep
+2017-11-29 14:34:09 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2017-11-29 14:34:09 +0000  Processing step: IDEDistributionODRStep
+2017-11-29 14:34:09 +0000  Processing step: IDEDistributionStripXattrsStep
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd095d9d650 'org.cocoapods.Alamofire' '<DVTFilePath:0x7fd0ba462290:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Alamofire.framework'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd095d50b40 'org.cocoapods.Reachability' '<DVTFilePath:0x7fd095f63050:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Reachability.framework'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd095c07500 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fd0ac624bb0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCore.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd096bd4fc0 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fd0946cb470:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreData.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd096aca0c0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fd0944a24c0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd096aa0060 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fd0c1766f80:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd096b22d40 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fd0a6e2ca40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreImage.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd0b1ab9ed0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fd0b1afb550:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDarwin.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd0b0da5ab0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fd0ab211d40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDispatch.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd096ccd3f0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fd0a8d1d8b0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftFoundation.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd0b1a33640 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fd0c13cefd0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftMetal.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd095a8f480 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fd0b1add8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd096b1edf0 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fd0aea07aa0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd096aceab0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7fd0c22f99e0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftUIKit.dylib'>'>
+2017-11-29 14:34:09 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fd0b0952bf0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fd0c1526220:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftos.dylib'>'>
+2017-11-29 14:34:09 +0000  Running /usr/bin/xattr '-crs' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app'
+2017-11-29 14:34:10 +0000  /usr/bin/xattr exited with 0
+2017-11-29 14:34:10 +0000  Processing step: IDEDistributionCodesignStep
+2017-11-29 14:34:10 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd095d9d650 'org.cocoapods.Alamofire' '<DVTFilePath:0x7fd0ba462290:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Alamofire.framework'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0a4c756a0>: {
+}
+2017-11-29 14:34:10 +0000  Entitlements for <IDEDistributionItem: 0x7fd095d9d650 'org.cocoapods.Alamofire' '<DVTFilePath:0x7fd0ba462290:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Alamofire.framework'>'>: {
+}
+2017-11-29 14:34:10 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd095d9d650 'org.cocoapods.Alamofire' '<DVTFilePath:0x7fd0ba462290:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Alamofire.framework'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlements6Z5z5J
+2017-11-29 14:34:10 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlements6Z5z5J' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/Alamofire.framework'
+2017-11-29 14:34:10 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/Alamofire.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.Alamofire]
+2017-11-29 14:34:10 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:10 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd095d50b40 'org.cocoapods.Reachability' '<DVTFilePath:0x7fd095f63050:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Reachability.framework'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd095b8e780>: {
+}
+2017-11-29 14:34:10 +0000  Entitlements for <IDEDistributionItem: 0x7fd095d50b40 'org.cocoapods.Reachability' '<DVTFilePath:0x7fd095f63050:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Reachability.framework'>'>: {
+}
+2017-11-29 14:34:10 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd095d50b40 'org.cocoapods.Reachability' '<DVTFilePath:0x7fd095f63050:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/Reachability.framework'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsMif6X2
+2017-11-29 14:34:10 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsMif6X2' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/Reachability.framework'
+2017-11-29 14:34:10 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/Reachability.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.Reachability]
+2017-11-29 14:34:11 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:11 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd095c07500 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fd0ac624bb0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCore.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0c2761d60>: {
+}
+2017-11-29 14:34:11 +0000  Entitlements for <IDEDistributionItem: 0x7fd095c07500 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fd0ac624bb0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCore.dylib'>'>: {
+}
+2017-11-29 14:34:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd095c07500 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fd0ac624bb0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCore.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsupuLGC
+2017-11-29 14:34:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsupuLGC' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCore.dylib'
+2017-11-29 14:34:12 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCore]
+2017-11-29 14:34:12 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:12 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096bd4fc0 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fd0946cb470:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreData.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0958dbf40>: {
+}
+2017-11-29 14:34:12 +0000  Entitlements for <IDEDistributionItem: 0x7fd096bd4fc0 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fd0946cb470:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreData.dylib'>'>: {
+}
+2017-11-29 14:34:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096bd4fc0 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fd0946cb470:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreData.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlements7h1LXs
+2017-11-29 14:34:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlements7h1LXs' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreData.dylib'
+2017-11-29 14:34:13 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreData.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreData]
+2017-11-29 14:34:13 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:13 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096aca0c0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fd0944a24c0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd096d26fc0>: {
+}
+2017-11-29 14:34:13 +0000  Entitlements for <IDEDistributionItem: 0x7fd096aca0c0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fd0944a24c0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib'>'>: {
+}
+2017-11-29 14:34:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096aca0c0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fd0944a24c0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsxhZBZk
+2017-11-29 14:34:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsxhZBZk' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib'
+2017-11-29 14:34:13 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreFoundation]
+2017-11-29 14:34:13 +0000  
+2017-11-29 14:34:13 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:13 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096aa0060 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fd0c1766f80:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd095bd1600>: {
+}
+2017-11-29 14:34:13 +0000  Entitlements for <IDEDistributionItem: 0x7fd096aa0060 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fd0c1766f80:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib'>'>: {
+}
+2017-11-29 14:34:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096aa0060 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fd0c1766f80:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsHWp15l
+2017-11-29 14:34:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsHWp15l' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib'
+2017-11-29 14:34:14 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreGraphics]
+2017-11-29 14:34:14 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:14 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096b22d40 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fd0a6e2ca40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreImage.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd096abc300>: {
+}
+2017-11-29 14:34:14 +0000  Entitlements for <IDEDistributionItem: 0x7fd096b22d40 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fd0a6e2ca40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreImage.dylib'>'>: {
+}
+2017-11-29 14:34:14 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096b22d40 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fd0a6e2ca40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftCoreImage.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlements9IwtK2
+2017-11-29 14:34:14 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlements9IwtK2' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreImage.dylib'
+2017-11-29 14:34:15 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftCoreImage.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreImage]
+2017-11-29 14:34:15 +0000  
+2017-11-29 14:34:15 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:15 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd0b1ab9ed0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fd0b1afb550:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDarwin.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0a4ca92f0>: {
+}
+2017-11-29 14:34:15 +0000  Entitlements for <IDEDistributionItem: 0x7fd0b1ab9ed0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fd0b1afb550:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDarwin.dylib'>'>: {
+}
+2017-11-29 14:34:15 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd0b1ab9ed0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fd0b1afb550:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDarwin.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsRfeQA9
+2017-11-29 14:34:15 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsRfeQA9' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftDarwin.dylib'
+2017-11-29 14:34:15 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftDarwin.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDarwin]
+2017-11-29 14:34:15 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:15 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd0b0da5ab0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fd0ab211d40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDispatch.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd095bd2690>: {
+}
+2017-11-29 14:34:15 +0000  Entitlements for <IDEDistributionItem: 0x7fd0b0da5ab0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fd0ab211d40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDispatch.dylib'>'>: {
+}
+2017-11-29 14:34:15 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd0b0da5ab0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fd0ab211d40:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftDispatch.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsVFIbd4
+2017-11-29 14:34:15 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsVFIbd4' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftDispatch.dylib'
+2017-11-29 14:34:16 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftDispatch.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDispatch]
+2017-11-29 14:34:16 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:16 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096ccd3f0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fd0a8d1d8b0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftFoundation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0aa6d6b70>: {
+}
+2017-11-29 14:34:16 +0000  Entitlements for <IDEDistributionItem: 0x7fd096ccd3f0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fd0a8d1d8b0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftFoundation.dylib'>'>: {
+}
+2017-11-29 14:34:16 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096ccd3f0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fd0a8d1d8b0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftFoundation.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsb6CFSY
+2017-11-29 14:34:16 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsb6CFSY' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftFoundation.dylib'
+2017-11-29 14:34:17 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftFoundation]
+2017-11-29 14:34:17 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:17 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd0b1a33640 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fd0c13cefd0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftMetal.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0a4fad320>: {
+}
+2017-11-29 14:34:17 +0000  Entitlements for <IDEDistributionItem: 0x7fd0b1a33640 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fd0c13cefd0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftMetal.dylib'>'>: {
+}
+2017-11-29 14:34:17 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd0b1a33640 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fd0c13cefd0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftMetal.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsbF3Rh9
+2017-11-29 14:34:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsbF3Rh9' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftMetal.dylib'
+2017-11-29 14:34:17 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftMetal.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftMetal]
+2017-11-29 14:34:17 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:17 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd095a8f480 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fd0b1add8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftObjectiveC.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0b0e9a450>: {
+}
+2017-11-29 14:34:17 +0000  Entitlements for <IDEDistributionItem: 0x7fd095a8f480 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fd0b1add8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftObjectiveC.dylib'>'>: {
+}
+2017-11-29 14:34:17 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd095a8f480 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fd0b1add8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftObjectiveC.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsqs8qjA
+2017-11-29 14:34:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsqs8qjA' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftObjectiveC.dylib'
+2017-11-29 14:34:17 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftObjectiveC.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftObjectiveC]
+2017-11-29 14:34:17 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:17 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096b1edf0 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fd0aea07aa0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftQuartzCore.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0b14d4030>: {
+}
+2017-11-29 14:34:17 +0000  Entitlements for <IDEDistributionItem: 0x7fd096b1edf0 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fd0aea07aa0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftQuartzCore.dylib'>'>: {
+}
+2017-11-29 14:34:17 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096b1edf0 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fd0aea07aa0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftQuartzCore.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsozSnr4
+2017-11-29 14:34:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsozSnr4' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftQuartzCore.dylib'
+2017-11-29 14:34:18 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftQuartzCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftQuartzCore]
+2017-11-29 14:34:18 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:18 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096aceab0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7fd0c22f99e0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftUIKit.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0a69f7840>: {
+}
+2017-11-29 14:34:18 +0000  Entitlements for <IDEDistributionItem: 0x7fd096aceab0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7fd0c22f99e0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftUIKit.dylib'>'>: {
+}
+2017-11-29 14:34:18 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096aceab0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7fd0c22f99e0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftUIKit.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsAkYOxh
+2017-11-29 14:34:18 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsAkYOxh' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftUIKit.dylib'
+2017-11-29 14:34:18 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftUIKit.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftUIKit]
+2017-11-29 14:34:18 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd0b0952bf0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fd0c1526220:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftos.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd0a81d40d0>: {
+}
+2017-11-29 14:34:19 +0000  Entitlements for <IDEDistributionItem: 0x7fd0b0952bf0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fd0c1526220:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftos.dylib'>'>: {
+}
+2017-11-29 14:34:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd0b0952bf0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fd0c1526220:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app/Frameworks/libswiftos.dylib'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsaiITDc
+2017-11-29 14:34:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementsaiITDc' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftos.dylib'
+2017-11-29 14:34:19 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app/Frameworks/libswiftos.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftos]
+2017-11-29 14:34:19 +0000  
+2017-11-29 14:34:19 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7fd096c3d760 'com.Legolas.Invoker.srun-ios' '<DVTFilePath:0x7fd0abbbc8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app'>'> from <IDEiCloudEntitlementsProcessor: 0x7fd095b57320>: {
+}
+2017-11-29 14:34:19 +0000  Entitlements for <IDEDistributionItem: 0x7fd096c3d760 'com.Legolas.Invoker.srun-ios' '<DVTFilePath:0x7fd0abbbc8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app'>'>: {
+    "application-identifier" = "RHBBUXEY37.com.Legolas.Invoker.srun-ios";
+    "com.apple.developer.team-identifier" = RHBBUXEY37;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "RHBBUXEY37.com.Legolas.Invoker.srun-ios"
+    );
+}
+2017-11-29 14:34:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7fd096c3d760 'com.Legolas.Invoker.srun-ios' '<DVTFilePath:0x7fd0abbbc8d0:'/Users/legolas/Library/Developer/Xcode/Archives/2017-11-29/srun-ios 2017-11-29 下午10.02.xcarchive/Products/Applications/srun-ios.app'>'> to: /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementswWLl8l
+2017-11-29 14:34:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'CFA4913A6245084DE79D2B500EF209D338254561' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/entitlementswWLl8l' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app'
+2017-11-29 14:34:23 +0000  /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root/Payload/srun-ios.app: signed app bundle with Mach-O universal (armv7 arm64) [com.Legolas.Invoker.srun-ios]
+2017-11-29 14:34:23 +0000  
+2017-11-29 14:34:23 +0000  /usr/bin/codesign exited with 0
+2017-11-29 14:34:23 +0000  Processing step: IDEDistributionStreamingZipItemStep
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-29 14:34:23 +0000  Processing step: IDEDistributionCreateIPAStep
+2017-11-29 14:34:24 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root' '/var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Packages/srun-ios.ipa'
+2017-11-29 14:34:24 +0000  >>> Copying /var/folders/82/81_myxk93pl5nk8pcxlr6xth0000gp/T/XcodeDistPipeline.q2y/Root 
+2017-11-29 14:34:24 +0000  copying file ./Payload/srun-ios.app/_CodeSignature/CodeResources ... 
+2017-11-29 14:34:24 +0000  15823 bytes for ./Payload/srun-ios.app/_CodeSignature/CodeResources
+2017-11-29 14:34:24 +0000  copying file ./Payload/srun-ios.app/AppIcon20x20@2x.png ... 
+2017-11-29 14:34:24 +0000  8196 bytes for ./Payload/srun-ios.app/AppIcon20x20@2x.png
+copying file ./Payload/srun-ios.app/AppIcon20x20@3x.png ... 
+2017-11-29 14:34:24 +0000  12128 bytes for ./Payload/srun-ios.app/AppIcon20x20@3x.png
+copying file ./Payload/srun-ios.app/AppIcon29x29@2x.png ... 
+2017-11-29 14:34:24 +0000  11699 bytes for ./Payload/srun-ios.app/AppIcon29x29@2x.png
+copying file ./Payload/srun-ios.app/AppIcon29x29@3x.png ... 
+2017-11-29 14:34:24 +0000  19473 bytes for ./Payload/srun-ios.app/AppIcon29x29@3x.png
+copying file ./Payload/srun-ios.app/AppIcon40x40@2x.png ... 
+2017-11-29 14:34:24 +0000  17471 bytes for ./Payload/srun-ios.app/AppIcon40x40@2x.png
+copying file ./Payload/srun-ios.app/AppIcon40x40@3x.png ... 
+2017-11-29 14:34:24 +0000  30957 bytes for ./Payload/srun-ios.app/AppIcon40x40@3x.png
+copying file ./Payload/srun-ios.app/AppIcon60x60@2x.png ... 
+2017-11-29 14:34:24 +0000  30957 bytes for ./Payload/srun-ios.app/AppIcon60x60@2x.png
+2017-11-29 14:34:24 +0000  copying file ./Payload/srun-ios.app/AppIcon60x60@3x.png ... 
+2017-11-29 14:34:24 +0000  59101 bytes for ./Payload/srun-ios.app/AppIcon60x60@3x.png
+copying file ./Payload/srun-ios.app/archived-expanded-entitlements.xcent ... 
+2017-11-29 14:34:24 +0000  394 bytes for ./Payload/srun-ios.app/archived-expanded-entitlements.xcent
+copying file ./Payload/srun-ios.app/Assets.car ... 
+2017-11-29 14:34:24 +0000  1500728 bytes for ./Payload/srun-ios.app/Assets.car
+copying file ./Payload/srun-ios.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2017-11-29 14:34:24 +0000  1790 bytes for ./Payload/srun-ios.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/srun-ios.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2017-11-29 14:34:24 +0000  258 bytes for ./Payload/srun-ios.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/srun-ios.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2017-11-29 14:34:24 +0000  832 bytes for ./Payload/srun-ios.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2017-11-29 14:34:24 +0000  351 bytes for ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/Info.plist
+copying file ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/t9a-dv-O8G-view-XOi-rE-kwz.nib ... 
+2017-11-29 14:34:24 +0000  2152 bytes for ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/t9a-dv-O8G-view-XOi-rE-kwz.nib
+copying file ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/UINavigationController-J6S-sK-u9T.nib ... 
+2017-11-29 14:34:24 +0000  1980 bytes for ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/UINavigationController-J6S-sK-u9T.nib
+copying file ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/UIViewController-t9a-dv-O8G.nib ... 
+2017-11-29 14:34:24 +0000  982 bytes for ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/UIViewController-t9a-dv-O8G.nib
+copying file ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/zr1-Ax-Jnh-view-bRx-bJ-Jkv.nib ... 
+2017-11-29 14:34:24 +0000  6241 bytes for ./Payload/srun-ios.app/Base.lproj/Main.storyboardc/zr1-Ax-Jnh-view-bRx-bJ-Jkv.nib
+2017-11-29 14:34:24 +0000  copying file ./Payload/srun-ios.app/embedded.mobileprovision ... 
+2017-11-29 14:34:24 +0000  7524 bytes for ./Payload/srun-ios.app/embedded.mobileprovision
+2017-11-29 14:34:24 +0000  copying file ./Payload/srun-ios.app/Frameworks/Alamofire.framework/_CodeSignature/CodeResources ... 
+2017-11-29 14:34:24 +0000  2202 bytes for ./Payload/srun-ios.app/Frameworks/Alamofire.framework/_CodeSignature/CodeResources
+2017-11-29 14:34:24 +0000  copying file ./Payload/srun-ios.app/Frameworks/Alamofire.framework/Alamofire ... 
+2017-11-29 14:34:25 +0000  2933584 bytes for ./Payload/srun-ios.app/Frameworks/Alamofire.framework/Alamofire
+2017-11-29 14:34:25 +0000  copying file ./Payload/srun-ios.app/Frameworks/Alamofire.framework/Info.plist ... 
+2017-11-29 14:34:25 +0000  737 bytes for ./Payload/srun-ios.app/Frameworks/Alamofire.framework/Info.plist
+copying file ./Payload/srun-ios.app/Frameworks/libswiftCore.dylib ... 
+2017-11-29 14:34:33 +0000  21079952 bytes for ./Payload/srun-ios.app/Frameworks/libswiftCore.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftCoreData.dylib ... 
+2017-11-29 14:34:33 +0000  394704 bytes for ./Payload/srun-ios.app/Frameworks/libswiftCoreData.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib ... 
+2017-11-29 14:34:33 +0000  208656 bytes for ./Payload/srun-ios.app/Frameworks/libswiftCoreFoundation.dylib
+2017-11-29 14:34:33 +0000  copying file ./Payload/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib ... 
+2017-11-29 14:34:34 +0000  578112 bytes for ./Payload/srun-ios.app/Frameworks/libswiftCoreGraphics.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftCoreImage.dylib ... 
+2017-11-29 14:34:34 +0000  209216 bytes for ./Payload/srun-ios.app/Frameworks/libswiftCoreImage.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftDarwin.dylib ... 
+2017-11-29 14:34:34 +0000  303424 bytes for ./Payload/srun-ios.app/Frameworks/libswiftDarwin.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftDispatch.dylib ... 
+2017-11-29 14:34:34 +0000  1009600 bytes for ./Payload/srun-ios.app/Frameworks/libswiftDispatch.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftFoundation.dylib ... 
+2017-11-29 14:34:36 +0000  8425664 bytes for ./Payload/srun-ios.app/Frameworks/libswiftFoundation.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftMetal.dylib ... 
+2017-11-29 14:34:36 +0000  251600 bytes for ./Payload/srun-ios.app/Frameworks/libswiftMetal.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftObjectiveC.dylib ... 
+2017-11-29 14:34:36 +0000  259296 bytes for ./Payload/srun-ios.app/Frameworks/libswiftObjectiveC.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftos.dylib ... 
+2017-11-29 14:34:36 +0000  249264 bytes for ./Payload/srun-ios.app/Frameworks/libswiftos.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftQuartzCore.dylib ... 
+2017-11-29 14:34:36 +0000  212560 bytes for ./Payload/srun-ios.app/Frameworks/libswiftQuartzCore.dylib
+copying file ./Payload/srun-ios.app/Frameworks/libswiftUIKit.dylib ... 
+2017-11-29 14:34:36 +0000  361840 bytes for ./Payload/srun-ios.app/Frameworks/libswiftUIKit.dylib
+copying file ./Payload/srun-ios.app/Frameworks/Reachability.framework/_CodeSignature/CodeResources ... 
+2017-11-29 14:34:36 +0000  2202 bytes for ./Payload/srun-ios.app/Frameworks/Reachability.framework/_CodeSignature/CodeResources
+copying file ./Payload/srun-ios.app/Frameworks/Reachability.framework/Info.plist ... 
+2017-11-29 14:34:36 +0000  743 bytes for ./Payload/srun-ios.app/Frameworks/Reachability.framework/Info.plist
+copying file ./Payload/srun-ios.app/Frameworks/Reachability.framework/Reachability ... 
+2017-11-29 14:34:36 +0000  335296 bytes for ./Payload/srun-ios.app/Frameworks/Reachability.framework/Reachability
+copying file ./Payload/srun-ios.app/Info.plist ... 
+2017-11-29 14:34:36 +0000  1355 bytes for ./Payload/srun-ios.app/Info.plist
+copying file ./Payload/srun-ios.app/PkgInfo ... 
+2017-11-29 14:34:36 +0000  8 bytes for ./Payload/srun-ios.app/PkgInfo
+copying file ./Payload/srun-ios.app/srun-ios ... 
+2017-11-29 14:34:36 +0000  395296 bytes for ./Payload/srun-ios.app/srun-ios
+copying file ./Payload/srun-ios.app/srun_ios.momd/srun_ios.mom ... 
+2017-11-29 14:34:36 +0000  513 bytes for ./Payload/srun-ios.app/srun_ios.momd/srun_ios.mom
+copying file ./Payload/srun-ios.app/srun_ios.momd/srun_ios.omo ... 
+2017-11-29 14:34:36 +0000  696 bytes for ./Payload/srun-ios.app/srun_ios.momd/srun_ios.omo
+copying file ./Payload/srun-ios.app/srun_ios.momd/VersionInfo.plist ... 
+2017-11-29 14:34:36 +0000  153 bytes for ./Payload/srun-ios.app/srun_ios.momd/VersionInfo.plist
+2017-11-29 14:34:36 +0000  /usr/bin/ditto exited with 0
+2017-11-29 14:34:36 +0000  Processing step: IDEDistributionCreateManifestStep
