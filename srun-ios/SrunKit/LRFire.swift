@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-//class LRFire: NSObject {
 
 func getRequest(url: String, with parameters : Parameters?, success handler: @escaping (DataResponse<Data>) -> Void) {
     request(url: url, method: .get, with: parameters, success: handler)

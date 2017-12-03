@@ -7,11 +7,27 @@
 //
 
 import Foundation
-final class LRSrunManger: NSObject {
+public final class LRSrunManger: NSObject {
     
     
-    static let shared = LRSrunManger()
+    public static let shared = LRSrunManger()
     private override init() {}
+    
+    public var defaultPassword : String? {
+        let defaults = UserDefaults.init(suiteName: "group.shared.defaults")!
+        if let pass = defaults.value(forKey: "password") as? String {
+            return pass
+        }
+        return nil
+    }
+    
+    public var defaultUserName : String? {
+        let defaults = UserDefaults.init(suiteName: "group.shared.defaults")!
+        if let username = defaults.value(forKey: "username") as? String {
+            return username
+        }
+        return nil
+    }
     
     var params : [String: Any] {
         get {
@@ -96,35 +112,45 @@ final class LRSrunManger: NSObject {
         }
     }
     
-        
-        func logout(messageHandler:@escaping ((String) -> Void)) {
-            getRequest(url: urlStrings.logoutURL, with: nil) { (response) in
-                guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
-                print(utf8Text)
-                messageHandler(utf8Text)
-            }
-        }
     
-//    func ping() {
-//        getRequest(url: LRSrunManger.selfServiceURLs.indexURL, with: nil) { (response) in
-//            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
-//            print(utf8Text)
-//        }
-//    }
-        
-        func status() {
-            getRequest(url: urlStrings.statusURL, with: nil) { (response) in
-                guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
-                print(utf8Text)
-            }
+    public func logout(messageHandler:@escaping ((String) -> Void)) {
+        getRequest(url: urlStrings.logoutURL, with: nil) { (response) in
+            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+            print(utf8Text)
+            messageHandler(utf8Text)
         }
+    }
+    
+    //    func ping() {
+    //        getRequest(url: LRSrunManger.selfServiceURLs.indexURL, with: nil) { (response) in
+    //            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+    //            print(utf8Text)
+    //        }
+    //    }
+    func getHours(from seconds:Int?)->String {
+        guard let second = seconds else { return "服务器后台改了 快催开发更新" }
+        let hours = Double(second / 3600)
+        return "已使用\(String(format: "%.1f", hours)) h"
+    }
+    
+    public  func status(messageHandler:@escaping ((String) -> Void)) {
+        getRequest(url: urlStrings.statusURL, with: nil) { (response) in
+            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+            print(utf8Text)
+            let components = utf8Text.components(separatedBy: ",")
+            guard components.count == 8 else { return }
+            let secondsUsed = components[5]
+            messageHandler(self.getHours(from: Int(secondsUsed)))
+        }
+    }
+    
     //TODO: password_error@1506253957 代表密码错误
     //TODO: 83966610641355,1969612396389466113,0,0,0 校园网崩溃
     //TODO: 奔溃状况下的登录成功 83966610641355,1969612396389466113,0,0,1508601600
     
-    func loginB(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
+    public  func loginB(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
         if retryTime == 0 { return }
-        let defaults = UserDefaults.standard
+        let defaults = UserDefaults.init(suiteName: "group.shared.defaults")!
         defaults.set(user, forKey: "username")
         defaults.set(password, forKey: "password")
         var params = self.params;
@@ -133,9 +159,10 @@ final class LRSrunManger: NSObject {
         postRequest(url: urlStrings.loginURL, with: params, success: { response in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
             print(utf8Text)
-            if utf8Text.components(separatedBy: ",").count == 5 {
+            let components = utf8Text.components(separatedBy: ",")
+            if components.count == 5 {
                 print("login success") //如果由,分割成5个 就是登陆成功 也log 然后退出
-                messageHandler("登陆成功！")
+                self.status(messageHandler: messageHandler)
                 return
             }
             let state = SrunState(rawValue: utf8Text)
@@ -146,32 +173,32 @@ final class LRSrunManger: NSObject {
             if parts.count == 2, let newTimeStamp = Int(parts[1])  {
                 print("server timeStamp: \(newTimeStamp)")
                 self.stampDifference = self.lastStamp! - newTimeStamp
-                    self.loginB(userName: user, password:password, retryTime: retryTime-1, messageHandler: messageHandler)
+                self.loginB(userName: user, password:password, retryTime: retryTime-1, messageHandler: messageHandler)
             }
         })
     }
-        
-        private func encrypt(with password: String, by timeStamp: Int) -> String {
-            var string =  ""
-            let key = String(timeStamp / 60) as NSString
-            let password = password as NSString
-            for i in 0..<password.length {
-                let p = password.character(at: i)
-                let index = key.length - i % key.length - 1
-                let k = key.character(at: index) ^ p
-                let l = (k&0x0f) + 0x36;
-                let h = ((k>>4)&0x0f) + 0x63;
-                let lString = String(describing: UnicodeScalar(l)!)
-                let hString = String(describing: UnicodeScalar(h)!)
-                if (i%2 == 1) {
-                    string.append(hString)
-                    string.append(lString)
-                } else {
-                    string.append(lString)
-                    string.append(hString)
-                }
+    
+    private func encrypt(with password: String, by timeStamp: Int) -> String {
+        var string =  ""
+        let key = String(timeStamp / 60) as NSString
+        let password = password as NSString
+        for i in 0..<password.length {
+            let p = password.character(at: i)
+            let index = key.length - i % key.length - 1
+            let k = key.character(at: index) ^ p
+            let l = (k&0x0f) + 0x36;
+            let h = ((k>>4)&0x0f) + 0x63;
+            let lString = String(describing: UnicodeScalar(l)!)
+            let hString = String(describing: UnicodeScalar(h)!)
+            if (i%2 == 1) {
+                string.append(hString)
+                string.append(lString)
+            } else {
+                string.append(lString)
+                string.append(hString)
             }
-            return string;
         }
-        
+        return string;
+    }
+    
 }

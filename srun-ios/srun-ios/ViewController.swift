@@ -11,6 +11,7 @@ import Alamofire
 import WebKit
 import Reachability
 import SystemConfiguration.CaptiveNetwork
+import SrunKit
 class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var userNameLabel: SummerTextField!
@@ -19,6 +20,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var selfButton: UIButton!
 
+    var manager : LRSrunManger {
+        return LRSrunManger.shared
+    }
     // 629 - 649
     var passWord : String  {
         return passwordLabel.text ?? ""
@@ -34,18 +38,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         userNameLabel.delegate = self
         passwordLabel.delegate = self
-        
-        let defaults = UserDefaults.standard
-        if let pass = defaults.value(forKey: "password") as? String {
-            passwordLabel.text = pass
-        }
-        if let user = defaults.value(forKey: "username") as? String {
-            userNameLabel.text = user
-        }
+        passwordLabel.text = manager.defaultPassword
+        userNameLabel.text = manager.defaultUserName
         passwordLabel.attributedPlaceholder = NSAttributedString.init(string:"密码", attributes: [
-            NSForegroundColorAttributeName:UIColor.white])
+            NSAttributedStringKey.foregroundColor:UIColor.white])
         userNameLabel.attributedPlaceholder = NSAttributedString.init(string:"学号", attributes: [
-            NSForegroundColorAttributeName:UIColor.white])
+            NSAttributedStringKey.foregroundColor:UIColor.white])
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do{
@@ -59,7 +57,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         super.didReceiveMemoryWarning()
     }
     
-    func reachabilityChanged(note: Notification) {
+    @objc func reachabilityChanged(note: Notification) {
         
         let reachability = note.object as! Reachability
         
@@ -69,7 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             let info = getWifiInfo()
             stateLabel.text = "当前接入的WI-FI为：\(info.ssid)"
             wifiStatus = .wifi
-//            LRSrunManger.shared.ping()
+//            manager.ping()
         case .cellular:
             stateLabel.text = "未连接WI-FI"
             print("Reachable via Cellular")
@@ -85,16 +83,16 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func login(_ sender: UIButton) {
         weak var weak_self = self
         checkNetworkStatus {
-            LRSrunManger.shared.loginB(userName: weak_self!.userName, password: weak_self!.passWord, retryTime: 3) { stateString in
+            weak_self?.manager.loginB(userName: weak_self!.userName, password: weak_self!.passWord, retryTime: 3) { stateString in
                 weak_self?.stateLabel.text = stateString
             }
         }
     }
     
     @IBAction func logout(_ sender: UIButton) {
+        weak var weak_self = self
         checkNetworkStatus {
-            weak var weak_self = self
-            LRSrunManger.shared.logout{ stateString in
+            weak_self?.manager.logout{ stateString in
                 weak_self?.stateLabel.text = stateString
             }
         }
@@ -102,7 +100,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func status(_ sender: UIButton) {
-        LRSrunManger.shared.status()
+        weak var weak_self = self
+        checkNetworkStatus {
+            weak_self?.manager.status{ stateString in
+                weak_self?.stateLabel.text = stateString
+            }
+        }
     }
     
     @IBAction func selfLogout(_ sender: GhostButton) {
@@ -121,7 +124,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
@@ -147,7 +150,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         weak var weak_self = self
         if (textField == passwordLabel) {
-            LRSrunManger.shared.loginB(userName: userName, password: passWord, retryTime: 3) { stateString in
+            manager.loginB(userName: userName, password: passWord, retryTime: 3) { stateString in
                 weak_self?.stateLabel.text = stateString
             }
         }

@@ -43,7 +43,7 @@ class webViewController: UIViewController, WKUIDelegate, UIScrollViewDelegate, W
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": webView]))
     }
 
-    func fireTimer() {
+    @objc func fireTimer() {
         let alert = UIAlertController(title: "校园网可能崩了", message: "连不上校园网，看看WiFi对么", preferredStyle: .alert)
         let action = UIAlertAction(title: "返回", style: .cancel) { _ in
             self.navigationController?.popViewController(animated: true)

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2225F475EF2D4859509B2811 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */; };
+		242F948D3CA77C1992C93962 /* Pods_SrunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C1721C065AF24C4014EA4A /* Pods_SrunKit.framework */; };
 		28100F4A1F4C2E6A005AB5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F491F4C2E6A005AB5F8 /* AppDelegate.swift */; };
 		28100F4C1F4C2E6A005AB5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F4B1F4C2E6A005AB5F8 /* ViewController.swift */; };
 		28100F4F1F4C2E6A005AB5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */; };
@@ -22,8 +22,15 @@
 		2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */; };
 		2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */; };
 		2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */; };
-		2834AC411F5E98F100C5EEC5 /* LRSrunManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */; };
-		2834AC431F5E9A8C00C5EEC5 /* LRFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */; };
+		A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */; };
+		A01D3AC41FD42EEA00DA9C59 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */; };
+		A01D3AC71FD42EEA00DA9C59 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D3AC51FD42EEA00DA9C59 /* MainInterface.storyboard */; };
+		A01D3ACB1FD42EEA00DA9C59 /* SrunToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0EBA22A1FD4405700A3509B /* SrunKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A0EBA2281FD4405700A3509B /* SrunKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0EBA22D1FD4405700A3509B /* SrunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EBA2261FD4405700A3509B /* SrunKit.framework */; };
+		A0EBA22E1FD4405700A3509B /* SrunKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0EBA2261FD4405700A3509B /* SrunKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0EBA2331FD4415C00A3509B /* LRSrunManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */; };
+		A0EBA2341FD4415C00A3509B /* LRFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */; };
 		F25CB9838D6F3E012B3B26D9 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +49,46 @@
 			remoteGlobalIDString = 28100F451F4C2E6A005AB5F8;
 			remoteInfo = "srun-ios";
 		};
+		A01D3AC91FD42EEA00DA9C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28100F3E1F4C2E6A005AB5F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A01D3ABE1FD42EEA00DA9C59;
+			remoteInfo = SrunToday;
+		};
+		A0EBA22B1FD4405700A3509B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28100F3E1F4C2E6A005AB5F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0EBA2251FD4405700A3509B;
+			remoteInfo = SrunKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A01D3ACF1FD42EEA00DA9C59 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A01D3ACB1FD42EEA00DA9C59 /* SrunToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0EBA2321FD4405700A3509B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0EBA22E1FD4405700A3509B /* SrunKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		28100F461F4C2E6A005AB5F8 /* srun-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "srun-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,10 +113,24 @@
 		2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickMacro.swift; sourceTree = "<group>"; };
 		2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRSrunManger.swift; sourceTree = "<group>"; };
 		2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRFire.swift; sourceTree = "<group>"; };
+		387D7A34EE6F836DC92C2272 /* Pods_SrunToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SrunToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2FBB17C71405664B158E33 /* Pods-SrunKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SrunKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SrunKit/Pods-SrunKit.release.xcconfig"; sourceTree = "<group>"; };
 		71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BCCCA124A6C4013A29EC23 /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
 		7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
+		A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SrunToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A01D3AC61FD42EEA00DA9C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A01D3AC81FD42EEA00DA9C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A02A3B8F1FD438DE00E67F96 /* srun-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "srun-ios.entitlements"; sourceTree = "<group>"; };
+		A02A3B901FD4391B00E67F96 /* SrunToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SrunToday.entitlements; sourceTree = "<group>"; };
+		A0EBA2261FD4405700A3509B /* SrunKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SrunKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0EBA2281FD4405700A3509B /* SrunKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SrunKit.h; sourceTree = "<group>"; };
+		A0EBA2291FD4405700A3509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57B43CA49047EB8E939B218 /* Pods-SrunKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SrunKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SrunKit/Pods-SrunKit.debug.xcconfig"; sourceTree = "<group>"; };
+		D0C1721C065AF24C4014EA4A /* Pods_SrunKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SrunKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A998619C560AD06F608511 /* Pods-srun-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		FED0846DC94391A5521F0424 /* Pods-srun-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25CB9838D6F3E012B3B26D9 /* Pods_srun_ios.framework in Frameworks */,
-				2225F475EF2D4859509B2811 /* Pods_srun_ios.framework in Frameworks */,
+				A0EBA22D1FD4405700A3509B /* SrunKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +156,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01D3ABC1FD42EEA00DA9C59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0EBA2221FD4405700A3509B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242F948D3CA77C1992C93962 /* Pods_SrunKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */,
+				A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */,
+				387D7A34EE6F836DC92C2272 /* Pods_SrunToday.framework */,
+				D0C1721C065AF24C4014EA4A /* Pods_SrunKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +204,8 @@
 			children = (
 				F6A998619C560AD06F608511 /* Pods-srun-ios.debug.xcconfig */,
 				91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */,
+				C57B43CA49047EB8E939B218 /* Pods-SrunKit.debug.xcconfig */,
+				4B2FBB17C71405664B158E33 /* Pods-SrunKit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -135,6 +216,8 @@
 				28100F481F4C2E6A005AB5F8 /* srun-ios */,
 				28100F7A1F4C300B005AB5F8 /* Supporting Files */,
 				1221AE8B68AC71C6605DA6A7 /* Pods */,
+				A01D3AC21FD42EEA00DA9C59 /* SrunToday */,
+				A0EBA2271FD4405700A3509B /* SrunKit */,
 				0FEDCB43B3A8B9023C7E8463 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -145,6 +228,8 @@
 				28100F461F4C2E6A005AB5F8 /* srun-ios.app */,
 				28100F5D1F4C2E6A005AB5F8 /* srun-iosTests.xctest */,
 				28100F681F4C2E6A005AB5F8 /* srun-iosUITests.xctest */,
+				A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */,
+				A0EBA2261FD4405700A3509B /* SrunKit.framework */,
 			);
 			name = Products;
 			path = ..;
@@ -153,10 +238,9 @@
 		28100F481F4C2E6A005AB5F8 /* srun-ios */ = {
 			isa = PBXGroup;
 			children = (
-				2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */,
+				A02A3B8F1FD438DE00E67F96 /* srun-ios.entitlements */,
 				28100F4B1F4C2E6A005AB5F8 /* ViewController.swift */,
 				2816F1841F60D25B00B83ABD /* SummerTextField.swift */,
-				2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */,
 				28100F7B1F4E922A005AB5F8 /* webViewController.swift */,
 				2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */,
 				2816F18A1F60D81100B83ABD /* Extensions */,
@@ -211,6 +295,28 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		A01D3AC21FD42EEA00DA9C59 /* SrunToday */ = {
+			isa = PBXGroup;
+			children = (
+				A02A3B901FD4391B00E67F96 /* SrunToday.entitlements */,
+				A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */,
+				A01D3AC51FD42EEA00DA9C59 /* MainInterface.storyboard */,
+				A01D3AC81FD42EEA00DA9C59 /* Info.plist */,
+			);
+			path = SrunToday;
+			sourceTree = "<group>";
+		};
+		A0EBA2271FD4405700A3509B /* SrunKit */ = {
+			isa = PBXGroup;
+			children = (
+				A0EBA2281FD4405700A3509B /* SrunKit.h */,
+				2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */,
+				2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */,
+				A0EBA2291FD4405700A3509B /* Info.plist */,
+			);
+			path = SrunKit;
+			sourceTree = "<group>";
+		};
 		E92690197ADB3556CB8816F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +327,17 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A0EBA2231FD4405700A3509B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0EBA22A1FD4405700A3509B /* SrunKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		28100F451F4C2E6A005AB5F8 /* srun-ios */ = {
@@ -233,10 +350,14 @@
 				28100F441F4C2E6A005AB5F8 /* Resources */,
 				B05760D88894461EEF99BBA3 /* [CP] Embed Pods Frameworks */,
 				36301DD3877E0A9BB05FD702 /* [CP] Copy Pods Resources */,
+				A01D3ACF1FD42EEA00DA9C59 /* Embed App Extensions */,
+				A0EBA2321FD4405700A3509B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A01D3ACA1FD42EEA00DA9C59 /* PBXTargetDependency */,
+				A0EBA22C1FD4405700A3509B /* PBXTargetDependency */,
 			);
 			name = "srun-ios";
 			productName = "srun-ios";
@@ -279,20 +400,63 @@
 			productReference = 28100F681F4C2E6A005AB5F8 /* srun-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A01D3ABE1FD42EEA00DA9C59 /* SrunToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01D3ACE1FD42EEA00DA9C59 /* Build configuration list for PBXNativeTarget "SrunToday" */;
+			buildPhases = (
+				A01D3ABB1FD42EEA00DA9C59 /* Sources */,
+				A01D3ABC1FD42EEA00DA9C59 /* Frameworks */,
+				A01D3ABD1FD42EEA00DA9C59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SrunToday;
+			productName = SrunToday;
+			productReference = A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A0EBA2251FD4405700A3509B /* SrunKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0EBA2311FD4405700A3509B /* Build configuration list for PBXNativeTarget "SrunKit" */;
+			buildPhases = (
+				2059FB4EDD727E244ECB05AC /* [CP] Check Pods Manifest.lock */,
+				A0EBA2211FD4405700A3509B /* Sources */,
+				A0EBA2221FD4405700A3509B /* Frameworks */,
+				A0EBA2231FD4405700A3509B /* Headers */,
+				A0EBA2241FD4405700A3509B /* Resources */,
+				17164F8FA89538D2D24C9773 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SrunKit;
+			productName = SrunKit;
+			productReference = A0EBA2261FD4405700A3509B /* SrunKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		28100F3E1F4C2E6A005AB5F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Legolas Invoker";
 				TargetAttributes = {
 					28100F451F4C2E6A005AB5F8 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = RHBBUXEY37;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					28100F5C1F4C2E6A005AB5F8 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -305,6 +469,23 @@
 						DevelopmentTeam = RHBBUXEY37;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 28100F451F4C2E6A005AB5F8;
+					};
+					A01D3ABE1FD42EEA00DA9C59 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = RHBBUXEY37;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A0EBA2251FD4405700A3509B = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = RHBBUXEY37;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -324,6 +505,8 @@
 				28100F451F4C2E6A005AB5F8 /* srun-ios */,
 				28100F5C1F4C2E6A005AB5F8 /* srun-iosTests */,
 				28100F671F4C2E6A005AB5F8 /* srun-iosUITests */,
+				A01D3ABE1FD42EEA00DA9C59 /* SrunToday */,
+				A0EBA2251FD4405700A3509B /* SrunKit */,
 			);
 		};
 /* End PBXProject section */
@@ -353,9 +536,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A01D3ABD1FD42EEA00DA9C59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01D3AC71FD42EEA00DA9C59 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0EBA2241FD4405700A3509B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17164F8FA89538D2D24C9773 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SrunKit/Pods-SrunKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2059FB4EDD727E244ECB05AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		2673027AA493405F40015637 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,11 +652,9 @@
 				2816F1891F60D80700B83ABD /* MymeriaExtension.swift in Sources */,
 				28100F4C1F4C2E6A005AB5F8 /* ViewController.swift in Sources */,
 				28100F4A1F4C2E6A005AB5F8 /* AppDelegate.swift in Sources */,
-				2834AC431F5E9A8C00C5EEC5 /* LRFire.swift in Sources */,
 				2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */,
 				2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */,
 				2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */,
-				2834AC411F5E98F100C5EEC5 /* LRSrunManger.swift in Sources */,
 				28100F521F4C2E6A005AB5F8 /* srun_ios.xcdatamodeld in Sources */,
 				28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */,
 			);
@@ -450,6 +676,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A01D3ABB1FD42EEA00DA9C59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01D3AC41FD42EEA00DA9C59 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0EBA2211FD4405700A3509B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0EBA2331FD4415C00A3509B /* LRSrunManger.swift in Sources */,
+				A0EBA2341FD4415C00A3509B /* LRFire.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -462,6 +705,16 @@
 			isa = PBXTargetDependency;
 			target = 28100F451F4C2E6A005AB5F8 /* srun-ios */;
 			targetProxy = 28100F691F4C2E6A005AB5F8 /* PBXContainerItemProxy */;
+		};
+		A01D3ACA1FD42EEA00DA9C59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A01D3ABE1FD42EEA00DA9C59 /* SrunToday */;
+			targetProxy = A01D3AC91FD42EEA00DA9C59 /* PBXContainerItemProxy */;
+		};
+		A0EBA22C1FD4405700A3509B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0EBA2251FD4405700A3509B /* SrunKit */;
+			targetProxy = A0EBA22B1FD4405700A3509B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -482,6 +735,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		A01D3AC51FD42EEA00DA9C59 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A01D3AC61FD42EEA00DA9C59 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -495,7 +756,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -503,7 +766,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -526,7 +793,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -546,7 +813,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -554,7 +823,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -571,7 +844,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -584,7 +857,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FED0846DC94391A5521F0424 /* Pods-srun-ios.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "srun-ios/srun-ios.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
@@ -595,7 +871,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -604,7 +881,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73BCCCA124A6C4013A29EC23 /* Pods-srun-ios.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "srun-ios/srun-ios.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
@@ -615,7 +895,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -678,6 +959,138 @@
 			};
 			name = Release;
 		};
+		A01D3ACC1FD42EEA00DA9C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = SrunToday/SrunToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RHBBUXEY37;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SrunToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Legolas.Invoker.srun-ios.SrunToday";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A01D3ACD1FD42EEA00DA9C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = SrunToday/SrunToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RHBBUXEY37;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SrunToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Legolas.Invoker.srun-ios.SrunToday";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0EBA22F1FD4405700A3509B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C57B43CA49047EB8E939B218 /* Pods-SrunKit.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RHBBUXEY37;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SrunKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Chang.Jing.LegolasX.SrunKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A0EBA2301FD4405700A3509B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B2FBB17C71405664B158E33 /* Pods-SrunKit.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RHBBUXEY37;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SrunKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Chang.Jing.LegolasX.SrunKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -713,6 +1126,24 @@
 			buildConfigurations = (
 				28100F781F4C2E6A005AB5F8 /* Debug */,
 				28100F791F4C2E6A005AB5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01D3ACE1FD42EEA00DA9C59 /* Build configuration list for PBXNativeTarget "SrunToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01D3ACC1FD42EEA00DA9C59 /* Debug */,
+				A01D3ACD1FD42EEA00DA9C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0EBA2311FD4405700A3509B /* Build configuration list for PBXNativeTarget "SrunKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0EBA22F1FD4405700A3509B /* Debug */,
+				A0EBA2301FD4405700A3509B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
