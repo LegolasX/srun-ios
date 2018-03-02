@@ -10,21 +10,39 @@ import UIKit
 
 class SummerTextField: UITextField {
 
-    override func awakeFromNib() {
+    let gradientLayer = CAGradientLayer()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override func layoutSubviews() {
+        layout()
+    }
+    
+    func setup() {
         textColor = UIColor.white
         layer.cornerRadius = 4
         layer.masksToBounds = true
         clipsToBounds = true
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = bounds
+        //setValue(UIColor.white, forKey: "_placeholderLabel.textColor")
+        let label = value(forKey: "_placeholderLabel") as! UILabel
+        label.textColor = UIColor.white
+        label.text = "white"
+        layout()
         gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.colors = [RGBCOLOR(r: 70, 75, 80).cgColor, UIColor.lrBlack.cgColor]
         layer.addSublayer(gradientLayer)
     }
     
-    
-    
-    
-
+    func layout() {
+        gradientLayer.frame = bounds
+    }
 }

@@ -146,7 +146,7 @@ public final class LRSrunManger: NSObject {
     
     //TODO: password_error@1506253957 代表密码错误
     //TODO: 83966610641355,1969612396389466113,0,0,0 校园网崩溃
-    //TODO: 奔溃状况下的登录成功 83966610641355,1969612396389466113,0,0,1508601600
+    //TODO: 崩溃状况下的登录成功 83966610641355,1969612396389466113,0,0,1508601600
     
     public  func loginB(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
         if retryTime == 0 { return }
