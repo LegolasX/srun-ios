@@ -129,7 +129,10 @@ extension URLRequest {
 ///
 /// - returns: The created `DataRequest`.
 @discardableResult
-public func request(    _ url: URLConvertible,    method: HTTPMethod = .get,    parameters: Parameters? = nil,
+public func request(
+    _ url: URLConvertible,
+    method: HTTPMethod = .get,
+    parameters: Parameters? = nil,
     encoding: ParameterEncoding = URLEncoding.default,
     headers: HTTPHeaders? = nil)
     -> DataRequest

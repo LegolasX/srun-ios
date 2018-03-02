@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J6S-sK-u9T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J6S-sK-u9T">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,85 +22,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="学号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uq4-ab-Ryv" customClass="SummerTextField" customModule="srun_ios" customModuleProvider="target">
-                                <rect key="frame" x="34" y="192" width="307" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUS-LF-W6V" customClass="SummerTextField" customModule="srun_ios" customModuleProvider="target">
-                                <rect key="frame" x="34" y="243" width="307" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsC-Rb-hvi" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                <rect key="frame" x="34" y="393" width="307" height="30"/>
-                                <state key="normal" title="上线"/>
-                                <connections>
-                                    <action selector="login:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="mpY-AQ-e0f"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhw-xi-Y79" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                <rect key="frame" x="34" y="453" width="307" height="30"/>
-                                <state key="normal" title="下线"/>
-                                <connections>
-                                    <action selector="logout:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="IBe-FH-Ig4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-ip-XCh" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                <rect key="frame" x="34" y="513" width="307" height="30"/>
-                                <state key="normal" title="自服务下线"/>
-                                <connections>
-                                    <action selector="selfLogout:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="3Bd-4U-J7L"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-sw-gkz">
-                                <rect key="frame" x="187.5" y="141.5" width="0.0" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bkk-9M-bCg">
+                                <rect key="frame" x="46" y="40.5" width="283" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-sw-gkz">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="学号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uq4-ab-Ryv" customClass="SummerTextField" customModule="srun_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="283" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUS-LF-W6V" customClass="SummerTextField" customModule="srun_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="283" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20.5" id="Vyq-Hq-YVS"/>
+                                    <constraint firstAttribute="height" constant="150" id="jYj-rd-ZBd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dta-ai-Cw4" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                <rect key="frame" x="34" y="341" width="307" height="30"/>
-                                <state key="normal" title="时长"/>
-                                <connections>
-                                    <action selector="status:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="RnP-jR-WMc"/>
-                                </connections>
-                            </button>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tdo-kG-xpH">
+                                <rect key="frame" x="30" y="249.5" width="315" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dta-ai-Cw4" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                        <state key="normal" title="时长"/>
+                                        <connections>
+                                            <action selector="status:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="RnP-jR-WMc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsC-Rb-hvi" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="315" height="30"/>
+                                        <state key="normal" title="上线"/>
+                                        <connections>
+                                            <action selector="login:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="mpY-AQ-e0f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhw-xi-Y79" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="315" height="30"/>
+                                        <state key="normal" title="下线"/>
+                                        <connections>
+                                            <action selector="logout:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="IBe-FH-Ig4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-ip-XCh" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="315" height="30"/>
+                                        <state key="normal" title="自服务下线"/>
+                                        <connections>
+                                            <action selector="selfLogout:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="3Bd-4U-J7L"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="zGs-L6-mkn"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NUS-LF-W6V" firstAttribute="height" secondItem="uq4-ab-Ryv" secondAttribute="height" id="5dS-JV-F7Y"/>
-                            <constraint firstItem="dta-ai-Cw4" firstAttribute="width" secondItem="tsC-Rb-hvi" secondAttribute="width" id="8JU-Io-1H5"/>
-                            <constraint firstItem="qhw-xi-Y79" firstAttribute="top" secondItem="tsC-Rb-hvi" secondAttribute="bottom" constant="30" id="9AE-cP-TA2"/>
-                            <constraint firstItem="NUS-LF-W6V" firstAttribute="leading" secondItem="uq4-ab-Ryv" secondAttribute="leading" id="9fI-XD-SHv"/>
-                            <constraint firstItem="qhw-xi-Y79" firstAttribute="leading" secondItem="WB1-ip-XCh" secondAttribute="leading" id="9nW-mD-TD2"/>
-                            <constraint firstItem="dta-ai-Cw4" firstAttribute="leading" secondItem="tsC-Rb-hvi" secondAttribute="leading" id="Cr8-ev-jm8"/>
-                            <constraint firstItem="uq4-ab-Ryv" firstAttribute="leading" secondItem="bRx-bJ-Jkv" secondAttribute="leading" constant="34" id="LRs-8R-gwR"/>
-                            <constraint firstItem="NUS-LF-W6V" firstAttribute="top" secondItem="uq4-ab-Ryv" secondAttribute="bottom" constant="21" id="O8K-eR-3RZ"/>
-                            <constraint firstItem="qhw-xi-Y79" firstAttribute="width" secondItem="WB1-ip-XCh" secondAttribute="width" id="Odm-mV-hzJ"/>
-                            <constraint firstItem="Zhb-sw-gkz" firstAttribute="top" secondItem="0ww-0t-V1P" secondAttribute="bottom" constant="141.5" id="PSY-ZA-PIN"/>
-                            <constraint firstItem="qhw-xi-Y79" firstAttribute="height" secondItem="WB1-ip-XCh" secondAttribute="height" id="QRI-dZ-Fpz"/>
-                            <constraint firstItem="tsC-Rb-hvi" firstAttribute="width" secondItem="qhw-xi-Y79" secondAttribute="width" id="ak1-zj-AIL"/>
-                            <constraint firstAttribute="trailing" secondItem="WB1-ip-XCh" secondAttribute="trailing" constant="34" id="bNz-fr-uzi"/>
-                            <constraint firstItem="tsC-Rb-hvi" firstAttribute="height" secondItem="qhw-xi-Y79" secondAttribute="height" id="c3C-IS-lmz"/>
-                            <constraint firstItem="Zhb-sw-gkz" firstAttribute="centerX" secondItem="bRx-bJ-Jkv" secondAttribute="centerX" id="ear-bX-wLe"/>
-                            <constraint firstItem="tsC-Rb-hvi" firstAttribute="top" secondItem="dta-ai-Cw4" secondAttribute="bottom" constant="22" id="edA-qa-3zb"/>
-                            <constraint firstItem="WB1-ip-XCh" firstAttribute="leading" secondItem="bRx-bJ-Jkv" secondAttribute="leading" constant="34" id="eyj-09-J71"/>
-                            <constraint firstItem="dta-ai-Cw4" firstAttribute="trailing" secondItem="tsC-Rb-hvi" secondAttribute="trailing" id="f94-vh-SNR"/>
-                            <constraint firstItem="WB1-ip-XCh" firstAttribute="top" secondItem="qhw-xi-Y79" secondAttribute="bottom" constant="30" id="mbJ-o4-nda"/>
-                            <constraint firstItem="dta-ai-Cw4" firstAttribute="height" secondItem="tsC-Rb-hvi" secondAttribute="height" id="q3f-34-vkv"/>
-                            <constraint firstAttribute="trailing" secondItem="uq4-ab-Ryv" secondAttribute="trailing" constant="34" id="rBH-xF-YFT"/>
-                            <constraint firstItem="tsC-Rb-hvi" firstAttribute="leading" secondItem="qhw-xi-Y79" secondAttribute="leading" id="sgM-wy-DVD"/>
-                            <constraint firstItem="GpB-e1-mLD" firstAttribute="top" secondItem="WB1-ip-XCh" secondAttribute="bottom" constant="60" id="vKg-7m-uqv"/>
-                            <constraint firstItem="NUS-LF-W6V" firstAttribute="width" secondItem="uq4-ab-Ryv" secondAttribute="width" id="wcP-n9-1Rb"/>
-                            <constraint firstItem="uq4-ab-Ryv" firstAttribute="top" secondItem="Zhb-sw-gkz" secondAttribute="bottom" constant="30" id="zVD-Ze-npe"/>
+                            <constraint firstAttribute="trailing" secondItem="tdo-kG-xpH" secondAttribute="trailing" constant="30" id="2Kx-QX-Jct"/>
+                            <constraint firstItem="tdo-kG-xpH" firstAttribute="top" secondItem="bkk-9M-bCg" secondAttribute="bottom" priority="250" constant="59" id="HFH-yL-Ny1"/>
+                            <constraint firstItem="tdo-kG-xpH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bkk-9M-bCg" secondAttribute="bottom" priority="750" constant="10" id="MsA-oq-zh2"/>
+                            <constraint firstItem="tdo-kG-xpH" firstAttribute="leading" secondItem="bRx-bJ-Jkv" secondAttribute="leading" constant="30" id="O0K-3N-AX7"/>
+                            <constraint firstItem="bkk-9M-bCg" firstAttribute="leading" secondItem="bRx-bJ-Jkv" secondAttribute="leadingMargin" constant="30" id="UJd-0g-GQq"/>
+                            <constraint firstItem="GpB-e1-mLD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tdo-kG-xpH" secondAttribute="bottom" constant="10" id="YRt-pY-hdl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bkk-9M-bCg" secondAttribute="trailing" constant="30" id="Zzg-Bp-C4X"/>
+                            <constraint firstItem="bkk-9M-bCg" firstAttribute="top" secondItem="0ww-0t-V1P" secondAttribute="bottom" constant="40.5" id="aIO-sm-q3L"/>
+                            <constraint firstItem="GpB-e1-mLD" firstAttribute="top" secondItem="tdo-kG-xpH" secondAttribute="bottom" priority="750" constant="143.5" id="xqn-Ou-Aco"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -116,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZd-kT-3FC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2983" y="356"/>
+            <point key="canvasLocation" x="2980" y="354.87256371814095"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="7sB-GK-hWw">

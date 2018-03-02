@@ -57,6 +57,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         super.didReceiveMemoryWarning()
     }
     
+    
     @objc func reachabilityChanged(note: Notification) {
         
         let reachability = note.object as! Reachability
@@ -83,7 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func login(_ sender: UIButton) {
         weak var weak_self = self
         checkNetworkStatus {
-            weak_self?.manager.loginB(userName: weak_self!.userName, password: weak_self!.passWord, retryTime: 3) { stateString in
+            weak_self?.manager.loginC(userName: weak_self!.userName, password: weak_self!.passWord, retryTime: 3) { stateString in
                 weak_self?.stateLabel.text = stateString
             }
         }
@@ -150,7 +151,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         weak var weak_self = self
         if (textField == passwordLabel) {
-            manager.loginB(userName: userName, password: passWord, retryTime: 3) { stateString in
+            manager.loginC(userName: userName, password: passWord, retryTime: 3) { stateString in
                 weak_self?.stateLabel.text = stateString
             }
         }

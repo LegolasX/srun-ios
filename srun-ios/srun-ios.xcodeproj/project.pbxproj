@@ -22,10 +22,13 @@
 		2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */; };
 		2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */; };
 		2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */; };
+		7489464F0DD464F1F01452C0 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */; };
+		A00737352048131D00473842 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00737342048131D00473842 /* SnapshotHelper.swift */; };
 		A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */; };
 		A01D3AC41FD42EEA00DA9C59 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */; };
 		A01D3AC71FD42EEA00DA9C59 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D3AC51FD42EEA00DA9C59 /* MainInterface.storyboard */; };
 		A01D3ACB1FD42EEA00DA9C59 /* SrunToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0A06C4F1FD459E000A31859 /* SrunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EBA2261FD4405700A3509B /* SrunKit.framework */; };
 		A0EBA22A1FD4405700A3509B /* SrunKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A0EBA2281FD4405700A3509B /* SrunKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0EBA22D1FD4405700A3509B /* SrunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EBA2261FD4405700A3509B /* SrunKit.framework */; };
 		A0EBA22E1FD4405700A3509B /* SrunKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0EBA2261FD4405700A3509B /* SrunKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -119,6 +122,7 @@
 		73BCCCA124A6C4013A29EC23 /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
 		7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
+		A00737342048131D00473842 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SrunToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			files = (
 				F25CB9838D6F3E012B3B26D9 /* Pods_srun_ios.framework in Frameworks */,
 				A0EBA22D1FD4405700A3509B /* SrunKit.framework in Frameworks */,
+				7489464F0DD464F1F01452C0 /* Pods_srun_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A06C4F1FD459E000A31859 /* SrunKit.framework in Frameworks */,
 				A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +246,8 @@
 			children = (
 				A02A3B8F1FD438DE00E67F96 /* srun-ios.entitlements */,
 				28100F4B1F4C2E6A005AB5F8 /* ViewController.swift */,
-				2816F1841F60D25B00B83ABD /* SummerTextField.swift */,
 				28100F7B1F4E922A005AB5F8 /* webViewController.swift */,
+				2816F1841F60D25B00B83ABD /* SummerTextField.swift */,
 				2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */,
 				2816F18A1F60D81100B83ABD /* Extensions */,
 				28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */,
@@ -263,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */,
+				A00737342048131D00473842 /* SnapshotHelper.swift */,
 				28100F6E1F4C2E6A005AB5F8 /* Info.plist */,
 			);
 			path = "srun-iosUITests";
@@ -575,13 +582,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SrunKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2673027AA493405F40015637 /* [CP] Check Pods Manifest.lock */ = {
@@ -599,7 +609,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		36301DD3877E0A9BB05FD702 /* [CP] Copy Pods Resources */ = {
@@ -624,17 +634,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-11/iOS/RevealServer.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -673,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28100F6D1F4C2E6A005AB5F8 /* srun_iosUITests.swift in Sources */,
+				A00737352048131D00473842 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,7 +882,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -897,7 +906,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

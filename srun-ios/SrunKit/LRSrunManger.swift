@@ -178,6 +178,17 @@ public final class LRSrunManger: NSObject {
         })
     }
     
+    public  func loginC(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
+        let param = ["action" : "login","ac_id"    : "1","user_ip"    : "","nas_ip"    : "","user_mac"    : "","username"    : "1141250201","password"    : "li777qing","save_me"    : "1"]
+        
+        postRequest(url: "http://202.204.67.15/srun_portal_phone.php", with: param, success: { response in
+            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+            print(utf8Text)
+            
+        })
+    }
+
+    
     private func encrypt(with password: String, by timeStamp: Int) -> String {
         var string =  ""
         let key = String(timeStamp / 60) as NSString
