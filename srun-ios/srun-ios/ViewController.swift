@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
     var manager : LRSrunManger {
         return LRSrunManger.shared
     }
-    // 629 - 649
     var passWord : String  {
         return passwordLabel.text ?? ""
     }
@@ -68,7 +67,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
             let info = getWifiInfo()
             stateLabel.text = "当前接入的WI-FI为：\(info.ssid)"
             wifiStatus = .wifi
-//            manager.ping()
         case .cellular:
             stateLabel.text = "未连接WI-FI"
             print("Reachable via Cellular")
@@ -84,7 +82,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func login(_ sender: UIButton) {
         weak var weak_self = self
         checkNetworkStatus {
-            weak_self?.manager.loginC(userName: weak_self!.userName, password: weak_self!.passWord, retryTime: 3) { stateString in
+            weak_self?.manager.loginB(userName: weak_self!.userName, password: weak_self!.passWord, retryTime: 3) { stateString in
                 weak_self?.stateLabel.text = stateString
             }
         }
@@ -151,7 +149,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         weak var weak_self = self
         if (textField == passwordLabel) {
-            manager.loginC(userName: userName, password: passWord, retryTime: 3) { stateString in
+            manager.loginB(userName: userName, password: passWord, retryTime: 3) { stateString in
                 weak_self?.stateLabel.text = stateString
             }
         }

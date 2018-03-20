@@ -60,7 +60,9 @@ public final class LRSrunManger: NSObject {
     }
     
     public func logout(messageHandler:@escaping ((String) -> Void)) {
-        getRequest(url: urlStrings.logoutURL, with: nil) { (response) in
+        let phoneURL = "http://202.204.67.15/srun_portal_phone.php"
+        let logoutParam = ["action" : "logout", "username" : "1141250201", "password" : "li777qing", "ajax" : "1"]
+        getRequest(url: phoneURL, with: logoutParam) { (response) in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
             print(utf8Text)
             messageHandler(utf8Text)
@@ -68,24 +70,23 @@ public final class LRSrunManger: NSObject {
     }
     
     public  func loginB(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
-
-    }
-    
-    public  func loginC(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
-        let param = ["action" : "login","ac_id"    : "1","user_ip"    : "","nas_ip"    : "","user_mac"    : "","username"    : "1141250201","password"    : "li777qing","save_me"    : "1"]
-        
         let loginPhoneParam = ["action" : "login","ac_id"    : "1","user_ip"    : "","nas_ip"    : "","user_mac"    : "","username"    : "1141250201","password"    : "li777qing","save_me"    : "1"]
-        let logoutParam = ["action" : "logout", "username" : "1141250201", "password" : "li777qing", "ajax" : "1"]
-        let paramPC = ["action" : "login", "username" : "1141250201", "password" : "li777qing", "ac_id" : "1", "user_ip" : "", "nas_ip" : "", "user_mac" : "", "save_me" : "0", "ajax" : "1"]
         let phoneURL = "http://202.204.67.15/srun_portal_phone.php"
-        let pcURL = "http://202.204.67.15/include/auth_action.php"
-        let status = "http://202.204.67.15/srun_portal_pc_succeed.php"
-        
-        
-        postRequest(url: "http://202.204.67.15/srun_portal_phone.php", with: param, success: { response in
+        postRequest(url: phoneURL, with: loginPhoneParam, success: { response in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
             print(utf8Text)
         })
     }
+    
+    public  func status(messageHandler:@escaping ((String) -> Void)) {
+        getRequest(url: "http://202.204.67.15/srun_portal_pc_succeed.php", with: nil) { (response) in
+            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+            print(utf8Text)
+        }
+    }
+    
+    //        let paramPC = ["action" : "login", "username" : "1141250201", "password" : "li777qing", "ac_id" : "1", "user_ip" : "", "nas_ip" : "", "user_mac" : "", "save_me" : "0", "ajax" : "1"]
+    
+    //        let pcURL = "http://202.204.67.15/include/auth_action.php"
     
 }
