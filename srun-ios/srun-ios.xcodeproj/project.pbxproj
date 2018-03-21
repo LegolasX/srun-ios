@@ -28,6 +28,7 @@
 		A01D3AC41FD42EEA00DA9C59 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */; };
 		A01D3AC71FD42EEA00DA9C59 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D3AC51FD42EEA00DA9C59 /* MainInterface.storyboard */; };
 		A01D3ACB1FD42EEA00DA9C59 /* SrunToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A06B4B4E20615DE6009DC0DE /* HTMLparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B4B4D20615DE6009DC0DE /* HTMLparser.swift */; };
 		A0A06C4F1FD459E000A31859 /* SrunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EBA2261FD4405700A3509B /* SrunKit.framework */; };
 		A0EBA22A1FD4405700A3509B /* SrunKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A0EBA2281FD4405700A3509B /* SrunKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0EBA22D1FD4405700A3509B /* SrunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EBA2261FD4405700A3509B /* SrunKit.framework */; };
@@ -130,6 +131,7 @@
 		A01D3AC81FD42EEA00DA9C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A02A3B8F1FD438DE00E67F96 /* srun-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "srun-ios.entitlements"; sourceTree = "<group>"; };
 		A02A3B901FD4391B00E67F96 /* SrunToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SrunToday.entitlements; sourceTree = "<group>"; };
+		A06B4B4D20615DE6009DC0DE /* HTMLparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLparser.swift; sourceTree = "<group>"; };
 		A0EBA2261FD4405700A3509B /* SrunKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SrunKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EBA2281FD4405700A3509B /* SrunKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SrunKit.h; sourceTree = "<group>"; };
 		A0EBA2291FD4405700A3509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			children = (
 				A0EBA2281FD4405700A3509B /* SrunKit.h */,
 				2834AC401F5E98F100C5EEC5 /* LRSrunManger.swift */,
+				A06B4B4D20615DE6009DC0DE /* HTMLparser.swift */,
 				2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */,
 				A0EBA2291FD4405700A3509B /* Info.plist */,
 			);
@@ -703,6 +706,7 @@
 			files = (
 				A0EBA2331FD4415C00A3509B /* LRSrunManger.swift in Sources */,
 				A0EBA2341FD4415C00A3509B /* LRFire.swift in Sources */,
+				A06B4B4E20615DE6009DC0DE /* HTMLparser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +996,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SrunToday/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1020,6 +1025,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SrunToday/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
