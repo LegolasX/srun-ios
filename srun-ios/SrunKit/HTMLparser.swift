@@ -34,7 +34,7 @@ func getParsedValue(nodeName:String, attributeTitle:String, attributeValue:Strin
 /// - Returns: 解析出的值,若解析失败，则返回nil
 func getParsedValueWithAddtion(nodeName:String, attributeTitle:String, attributeValue:String, value:String?, html:String, addtion:String?) -> String? {
     let path = "//\(nodeName)[@\(attributeTitle)='\(attributeValue)'\(addtion ?? "")]"
-    print(path)
+//    print(path)
     return getParsedValueWith(path, from: html, for: value)
 }
 

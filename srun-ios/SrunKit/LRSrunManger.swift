@@ -94,22 +94,19 @@ public final class LRSrunManger: NSObject {
     public  func status(messageHandler:@escaping ((String) -> Void)) {
         getRequest(url: "http://202.204.67.15/srun_portal_pc_succeed.php", with: nil) { (response) in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
-//            print(utf8Text)
-            print(getParsedValueWith("//span[@id='sum_bytes'][2]", from: utf8Text, for: nil))
-            print(getParsedValueWith("//span[@id='sum_bytes'][1]", from: utf8Text, for: nil))
-            print(getParsedValueWith("//span[@id='sum_bytes'][0]", from: utf8Text, for: nil))
-
-//            guard let userBalance = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "user_balance", value: nil, html: utf8Text),
-//                let sumSeconds = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "sum_seconds", value: nil, html: utf8Text),
-////                let sumBytes = getParsedValueWithAddtion(nodeName: "span", attributeTitle: "id", attributeValue: "sum_bytes", value: nil, html: utf8Text, addtion:"1"),
-//                let userName = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "user_name", value: nil, html: utf8Text) else { return }
-//            print(userBalance,sumSeconds,sumBytes,userName)
-            
+            print(utf8Text)
+            guard
+                let userBalance = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "user_balance", value: nil, html: utf8Text),
+                let sumSeconds = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "sum_seconds", value: nil, html: utf8Text),
+                let sumBytes = getParsedValueWith("(//span[@id='sum_bytes'])[2]", from: utf8Text, for: nil),
+                let userName = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "user_name", value: nil, html: utf8Text)
+                else {
+                    return
+            }
+            print(userBalance,sumSeconds,sumBytes,userName)
         }
     }
-    
     //        let paramPC = ["action" : "login", "username" : "1141250201", "password" : "li777qing", "ac_id" : "1", "user_ip" : "", "nas_ip" : "", "user_mac" : "", "save_me" : "0", "ajax" : "1"]
-    
     //        let pcURL = "http://202.204.67.15/include/auth_action.php"
     
 }
