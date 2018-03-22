@@ -30,56 +30,32 @@ public final class LRSrunManger: NSObject {
         }
         return nil
     }
-    
-    var params : [String: Any] {
-        get {
-            return [
-                "drop":"0",
-                "type":"10",
-                "n":"117",
-                "pop":"0",
-                "ac_type":"h3c",
-                "mac":""
-            ]
-        }
+
+    func packingLoginParams(userName:String, password: String) -> [String : Any] {
+        return [
+            "action"  : "login",
+            "ac_id"   : "1",
+            "user_ip" : "",
+            "nas_ip"  : "",
+            "user_mac": "",
+            "save_me" : "1",
+            "username": userName,
+            "password": password
+        ]
     }
     
-    static var ip : String = "202.204.67.15"
-    static var port : String = "3333"
-    static var ipPort : String {
-        return "http://" + ip + (port == "" ? "" :":\(port)") + "/cgi-bin/"
-        
-    }
     struct urlStrings {
-        static let loginURL = ipPort  + "do_login/"
-        static let forceLogoutURL = ipPort  + "force_logout"
-        static let logoutURL = ipPort  + "do_logout/"
-        static let statusURL = ipPort  + "keeplive"
+        static let logInOutURL = "http://202.204.67.15/srun_portal_phone.php"
+        static let statusURL = "http://202.204.67.15/srun_portal_pc_succeed.php"
     }
     
-    struct selfServiceURLs {
-        static let indexURL = "http://self.ncepu.edu.cn:8800"
-    }
-    
-    public func logout(messageHandler:@escaping ((String) -> Void)) {
-        let phoneURL = "http://202.204.67.15/srun_portal_phone.php"
-        guard let info = self.info, let action = self.action, let ip = self.userIP else { return }
-        let logoutParam = ["action" : action, "info" : info, "user_ip" : ip]
-        postRequest(url: phoneURL, with: logoutParam) { (response) in
-            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
-            print(utf8Text)
-            if let success = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
-                messageHandler(success.trimmingCharacters(in: .whitespacesAndNewlines))
-            }
-        }
-    }
     var userIP : String?
     var action : String?
     var info : String?
-    public  func loginB(userName user:String, password:String, retryTime:NSInteger, messageHandler:@escaping ((String) -> Void)) {
-        let loginPhoneParam = ["action" : "login","ac_id"    : "1","user_ip"    : "","nas_ip"    : "","user_mac"    : "","username"    : "1141250201","password"    : "li777qing","save_me"    : "1"]
-        let phoneURL = "http://202.204.67.15/srun_portal_phone.php"
-        postRequest(url: phoneURL, with: loginPhoneParam, success: { response in
+    
+    public  func login(userName user:String, password:String, messageHandler:@escaping ((String) -> Void)) {
+        let loginPhoneParam = packingLoginParams(userName: user, password: password)
+        postRequest(url: urlStrings.logInOutURL, parameters: loginPhoneParam, successHandler: { response in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
             print(utf8Text)
             self.info = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "info", value: "value", html: utf8Text)
@@ -92,7 +68,7 @@ public final class LRSrunManger: NSObject {
     }
     
     public  func status(messageHandler:@escaping ((String) -> Void)) {
-        getRequest(url: "http://202.204.67.15/srun_portal_pc_succeed.php", with: nil) { (response) in
+        getRequest(url: urlStrings.statusURL, parameters: nil) { (response) in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
             print(utf8Text)
             guard
@@ -104,6 +80,24 @@ public final class LRSrunManger: NSObject {
                     return
             }
             print(userBalance,sumSeconds,sumBytes,userName)
+        }
+    }
+    
+    public func logout(messageHandler:@escaping ((String) -> Void)) {
+        guard let info = self.info, let action = self.action, let ip = self.userIP else {
+            messageHandler("尚未登录")
+            return
+        }
+        let logoutParam = ["action" : action, "info" : info, "user_ip" : ip]
+        postRequest(url: urlStrings.logInOutURL, parameters: logoutParam) { (response) in
+            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else {
+                messageHandler("登录失败")
+                return
+            }
+            print(utf8Text)
+            if let success = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
+                messageHandler(success.trimmingCharacters(in: .whitespacesAndNewlines))
+            }
         }
     }
     //        let paramPC = ["action" : "login", "username" : "1141250201", "password" : "li777qing", "ac_id" : "1", "user_ip" : "", "nas_ip" : "", "user_mac" : "", "save_me" : "0", "ajax" : "1"]

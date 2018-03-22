@@ -103,7 +103,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="yYH-s6-fw5"/>
                     <connections>
-                        <outlet property="loginButton" destination="tsC-Rb-hvi" id="8x5-nc-5aE"/>
+                        <outlet property="loginutton" destination="tsC-Rb-hvi" id="8x5-nc-5aE"/>
                         <outlet property="logoutButton" destination="qhw-xi-Y79" id="7M8-ch-seY"/>
                         <outlet property="passwordLabel" destination="NUS-LF-W6V" id="mWI-pV-VJL"/>
                         <outlet property="selfButton" destination="WB1-ip-XCh" id="aua-RX-k5a"/>

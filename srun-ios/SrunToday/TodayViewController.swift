@@ -26,12 +26,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBAction func logIn(_ sender: UIButton) {
         weak var wSelf = self
         if let pass = manager.defaultPassword, let user = manager.defaultUserName {
-            manager.loginB(userName: user, password: pass, retryTime: 3, messageHandler: { message in
+            manager.login(userName: user, password: pass, messageHandler: { message in
                 wSelf!.stateLabel.text = message
                 UIView.animate(withDuration: 0.5, animations: {
                     wSelf!.view.layoutIfNeeded()
                 })
             })
+            
         }
     }
     @IBAction func logOut(_ sender: UIButton) {

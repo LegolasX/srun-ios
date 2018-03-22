@@ -9,12 +9,12 @@
 import Foundation
 import Alamofire
 
-func getRequest(url: String, with parameters : Parameters?, success handler: @escaping (DataResponse<Data>) -> Void) {
-    request(url: url, method: .get, with: parameters, success: handler)
+func getRequest(url: String, parameters param: Parameters?, successHandler handler: @escaping (DataResponse<Data>) -> Void) {
+    request(url: url, method: .get, with: param, success: handler)
 }
 
-func postRequest(url: String, with parameters : Parameters?, success handler: @escaping (DataResponse<Data>) -> Void) {
-    request(url: url, method: .post, with: parameters, success: handler)
+func postRequest(url: String, parameters param : Parameters?, successHandler handler: @escaping (DataResponse<Data>) -> Void) {
+    request(url: url, method: .post, with: param, success: handler)
 }
 
 private func request(url: String,
@@ -24,19 +24,11 @@ private func request(url: String,
     let headers : HTTPHeaders = [
         "Accept-Type":"text/html"
     ]
-    var params = Parameters()
-    if let p = parameters {
-        params = p
-    }
-    Alamofire.request(url, method: method, parameters: params, headers: headers).responseData { (response) in
+    Alamofire.request(url, method: method, parameters: parameters ?? nil, headers: headers).responseData { (response) in
         guard response.result.isSuccess != false else {
-                            print("Error: \(String(describing: response.error))")
-            //TODO: fix this error showing 
-            //Optional(Error Domain=NSURLErrorDomain Code=-1004 "Could not connect to the server." UserInfo={NSUnderlyingError=0x170243cf0 {Error Domain=kCFErrorDomainCFNetwork Code=-1004 "(null)" UserInfo={_kCFStreamErrorCodeKey=64, _kCFStreamErrorDomainKey=1}}, NSErrorFailingURLStringKey=http://202.204.67.15:3333/cgi-bin/do_login, NSErrorFailingURLKey=http://202.204.67.15:3333/cgi-bin/do_login, _kCFStreamErrorDomainKey=1, _kCFStreamErrorCodeKey=64, NSLocalizedDescription=Could not connect to the server.})
+            print("Error: \(String(describing: response.error))")
             return
         }
-                   // print("Request: \(String(describing: response.request))")
-                    //print("Response: \(String(describing: response.response))")
         handler(response)
     }
 }
