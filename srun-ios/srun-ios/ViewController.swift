@@ -36,12 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         userNameLabel.delegate = self
         passwordLabel.delegate = self
-        passwordLabel.attributedPlaceholder = NSAttributedString.init(string:"密码", attributes: [
-            NSAttributedStringKey.foregroundColor:UIColor.white])
-        userNameLabel.attributedPlaceholder = NSAttributedString.init(string:"学号", attributes: [
-            NSAttributedStringKey.foregroundColor:UIColor.white])
-        passwordLabel.text = manager.defaultPassword ?? ""
-        userNameLabel.text = manager.defaultUserName ?? ""
+        setupTextFields()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do{
             try reachability.startNotifier()
@@ -52,6 +47,22 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setupTextFields() {
+        userNameLabel.attributedPlaceholder = NSAttributedString.init(string:"学号", attributes: [
+            NSAttributedStringKey.foregroundColor:UIColor.white])
+        userNameLabel.keyboardType = .numberPad
+        userNameLabel.returnKeyType = .next
+        
+        passwordLabel.attributedPlaceholder = NSAttributedString.init(string:"密码", attributes: [
+            NSAttributedStringKey.foregroundColor:UIColor.white])
+        passwordLabel.keyboardType = .alphabet
+        passwordLabel.returnKeyType = .go
+        passwordLabel.autocorrectionType = .no
+        passwordLabel.isSecureTextEntry = true
+        passwordLabel.text = manager.defaultPassword ?? ""
+        userNameLabel.text = manager.defaultUserName ?? ""
     }
     
     

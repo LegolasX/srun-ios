@@ -23,21 +23,21 @@ class SummerTextField: UITextField {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         layout()
     }
     
     func setup() {
-        textColor = UIColor.white
+        textColor = .white
         layer.cornerRadius = 4
         layer.masksToBounds = true
         clipsToBounds = true
-//        setValue(UIColor.white, forKey: "_placeholderLabel.textColor")
-//        let label = value(forKey: "_placeholderLabel") as! UILabel
+        keyboardAppearance = .dark
+        layer.addSublayer(gradientLayer)
         layout()
         gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.colors = [RGBCOLOR(r: 70, 75, 80).cgColor, UIColor.lrBlack.cgColor]
-        layer.addSublayer(gradientLayer)
     }
     
     func layout() {
