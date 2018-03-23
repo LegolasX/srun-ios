@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import Alamofire
 import WebKit
 import Reachability
-import SystemConfiguration.CaptiveNetwork
 import SrunKit
 class ViewController: UIViewController, UITextFieldDelegate{
     
@@ -59,7 +57,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     @objc func reachabilityChanged(note: Notification) {
         let reachability = note.object as! Reachability
-        
         switch reachability.connection {
         case .wifi:
             print("Reachable via WiFi")
@@ -126,31 +123,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
         view.endEditing(true)
     }
     
-    func getWifiInfo() -> (ssid: String, mac: String) {
-        if let cfas: NSArray = CNCopySupportedInterfaces() {
-            for cfa in cfas {
-                if let dict = CFBridgingRetain(
-                    CNCopyCurrentNetworkInfo(cfa as! CFString)
-                    ) {
-                    if let ssid = dict["SSID"] as? String,
-                        let bssid = dict["BSSID"] as? String {
-                        return (ssid, bssid)
-                    }
-                }
-            }
-        }
-        return ("未知", "未知")
-    }
-    
     // MARK: - textField Delegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        weak var weak_self = self
         if (textField == passwordLabel) {
-            manager.login(userName: userName, password: passWord) { stateString in
-                weak_self?.stateLabel.text = stateString
-            }
+            self.login(self.loginutton)
         }
         return true
     }

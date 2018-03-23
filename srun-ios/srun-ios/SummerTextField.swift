@@ -31,10 +31,8 @@ class SummerTextField: UITextField {
         layer.cornerRadius = 4
         layer.masksToBounds = true
         clipsToBounds = true
-        //setValue(UIColor.white, forKey: "_placeholderLabel.textColor")
-        let label = value(forKey: "_placeholderLabel") as! UILabel
-        label.textColor = UIColor.white
-        label.text = "white"
+//        setValue(UIColor.white, forKey: "_placeholderLabel.textColor")
+//        let label = value(forKey: "_placeholderLabel") as! UILabel
         layout()
         gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)

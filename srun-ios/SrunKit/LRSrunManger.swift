@@ -15,20 +15,24 @@ public final class LRSrunManger: NSObject {
     public static let shared = LRSrunManger()
     private override init() {}
     
+    let defaults = UserDefaults.init(suiteName: "group.shared.defaults")!
+    
+    struct urlStrings {
+        static let logInOutURL = "http://202.204.67.15/srun_portal_phone.php"
+        static let statusURL = "http://202.204.67.15/srun_portal_pc_succeed.php"
+    }
+    
+    struct userDefaultsKey {
+        static let userName = "username"
+        static let password = "password"
+    }
+    
     public var defaultPassword : String? {
-        let defaults = UserDefaults.init(suiteName: "group.shared.defaults")!
-        if let pass = defaults.value(forKey: "password") as? String {
-            return pass
-        }
-        return nil
+        return defaults.value(forKey: userDefaultsKey.password) as? String
     }
     
     public var defaultUserName : String? {
-        let defaults = UserDefaults.init(suiteName: "group.shared.defaults")!
-        if let username = defaults.value(forKey: "username") as? String {
-            return username
-        }
-        return nil
+        return defaults.value(forKey: userDefaultsKey.userName) as? String
     }
 
     func packingLoginParams(userName:String, password: String) -> [String : Any] {
@@ -42,11 +46,6 @@ public final class LRSrunManger: NSObject {
             "username": userName,
             "password": password
         ]
-    }
-    
-    struct urlStrings {
-        static let logInOutURL = "http://202.204.67.15/srun_portal_phone.php"
-        static let statusURL = "http://202.204.67.15/srun_portal_pc_succeed.php"
     }
     
     var userIP : String?
@@ -63,6 +62,10 @@ public final class LRSrunManger: NSObject {
             self.userIP = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "user_ip", value: "value", html: utf8Text)
             if let success = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
                 messageHandler(success.trimmingCharacters(in: .whitespacesAndNewlines))
+                self.defaults.set(user, forKey: userDefaultsKey.userName)
+                self.defaults.set(password, forKey: userDefaultsKey.password)
+            } else {
+                messageHandler("登录失败")
             }
         })
     }
