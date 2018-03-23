@@ -60,8 +60,8 @@ public final class LRSrunManger: NSObject {
             self.info = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "info", value: "value", html: utf8Text)
             self.action = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "action", value: "value", html: utf8Text)
             self.userIP = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "user_ip", value: "value", html: utf8Text)
-            if let success = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
-                messageHandler(success.trimmingCharacters(in: .whitespacesAndNewlines))
+            if let _ = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
+                self.status(messageHandler: messageHandler)
                 self.defaults.set(user, forKey: userDefaultsKey.userName)
                 self.defaults.set(password, forKey: userDefaultsKey.password)
             } else {
@@ -76,13 +76,18 @@ public final class LRSrunManger: NSObject {
             print(utf8Text)
             guard
                 let userBalance = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "user_balance", value: nil, html: utf8Text),
-                let sumSeconds = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "sum_seconds", value: nil, html: utf8Text),
+                var sumSeconds = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "sum_seconds", value: nil, html: utf8Text),
                 let sumBytes = getParsedValueWith("(//span[@id='sum_bytes'])[2]", from: utf8Text, for: nil),
                 let userName = getParsedValue(nodeName: "span", attributeTitle: "id", attributeValue: "user_name", value: nil, html: utf8Text)
                 else {
                     return
             }
+            if sumSeconds.contains("小时") {
+                sumSeconds = "\(sumSeconds.components(separatedBy: "时")[0])时"
+            }
+            let status = "已使用\(sumSeconds) 计费组：\((userBalance.dropFirst() as NSString).integerValue)"
             print(userBalance,sumSeconds,sumBytes,userName)
+            messageHandler(status)
         }
     }
     
