@@ -6,6 +6,8 @@ target ‘srun-ios’ do
   # pod "SwiftSpinner"
     pod 'Reveal-SDK', :configurations => ['Debug']
     pod 'ReachabilitySwift'
+    pod 'Fabric'
+	pod 'Crashlytics'
   # pod 'Kanna', '~> 4.0.0'
 end
 target 'SrunKit' do 
