@@ -22,6 +22,7 @@
 		2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */; };
 		2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */; };
 		2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */; };
+		331181696928BE25CC3C9255 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */; };
 		A00737352048131D00473842 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00737342048131D00473842 /* SnapshotHelper.swift */; };
 		A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */; };
 		A01D3AC41FD42EEA00DA9C59 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */; };
@@ -149,6 +150,7 @@
 			files = (
 				F25CB9838D6F3E012B3B26D9 /* Pods_srun_ios.framework in Frameworks */,
 				A0EBA22D1FD4405700A3509B /* SrunKit.framework in Frameworks */,
+				331181696928BE25CC3C9255 /* Pods_srun_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
