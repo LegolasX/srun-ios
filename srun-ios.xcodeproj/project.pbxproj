@@ -365,6 +365,7 @@
 				36301DD3877E0A9BB05FD702 /* [CP] Copy Pods Resources */,
 				A01D3ACF1FD42EEA00DA9C59 /* Embed App Extensions */,
 				A0EBA2321FD4405700A3509B /* Embed Frameworks */,
+				A00FB2CF207E143E00AA67DD /* Run Fabric Script */,
 			);
 			buildRules = (
 			);
@@ -634,6 +635,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A00FB2CF207E143E00AA67DD /* Run Fabric Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Fabric Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 88f6adc93059fa4384a6fb4dd11d5567cefd0718 8337be1dcc8db5f04a3eea93a4dc789fe400efbbcf46ea111ba54adf554b7012";
 		};
 		B05760D88894461EEF99BBA3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
