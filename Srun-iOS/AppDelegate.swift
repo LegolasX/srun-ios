@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //integrate Fabric/Crashlytics
         Fabric.with([Crashlytics.self])
+        Fabric.sharedSDK().debug = true
 
         return true
     }
