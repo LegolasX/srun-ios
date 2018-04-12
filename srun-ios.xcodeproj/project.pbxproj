@@ -22,6 +22,7 @@
 		2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */; };
 		2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3C1F5E4C7D00C5EEC5 /* UIColor+Extension.swift */; };
 		2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3E1F5E4E3300C5EEC5 /* QuickMacro.swift */; };
+		2B47F08816D365BFD07C361B /* Pods_SrunToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387D7A34EE6F836DC92C2272 /* Pods_SrunToday.framework */; };
 		331181696928BE25CC3C9255 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */; };
 		A00737352048131D00473842 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00737342048131D00473842 /* SnapshotHelper.swift */; };
 		A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */; };
@@ -120,10 +121,12 @@
 		2834AC421F5E9A8C00C5EEC5 /* LRFire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRFire.swift; sourceTree = "<group>"; };
 		387D7A34EE6F836DC92C2272 /* Pods_SrunToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SrunToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2FBB17C71405664B158E33 /* Pods-SrunKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SrunKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SrunKit/Pods-SrunKit.release.xcconfig"; sourceTree = "<group>"; };
+		66FC650DAA1659A63319DFB9 /* Pods-SrunToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SrunToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SrunToday/Pods-SrunToday.debug.xcconfig"; sourceTree = "<group>"; };
 		71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BCCCA124A6C4013A29EC23 /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
 		7F19333ECF81E994CC5099ED /* Pods_srun_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_srun_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
+		95A75E83C02E2F327C258DFB /* Pods-SrunToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SrunToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-SrunToday/Pods-SrunToday.release.xcconfig"; sourceTree = "<group>"; };
 		A00737342048131D00473842 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SrunToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -174,6 +177,7 @@
 			files = (
 				A0A06C4F1FD459E000A31859 /* SrunKit.framework in Frameworks */,
 				A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */,
+				2B47F08816D365BFD07C361B /* Pods_SrunToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +220,8 @@
 				91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */,
 				C57B43CA49047EB8E939B218 /* Pods-SrunKit.debug.xcconfig */,
 				4B2FBB17C71405664B158E33 /* Pods-SrunKit.release.xcconfig */,
+				66FC650DAA1659A63319DFB9 /* Pods-SrunToday.debug.xcconfig */,
+				95A75E83C02E2F327C258DFB /* Pods-SrunToday.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -223,11 +229,11 @@
 		28100F3D1F4C2E6A005AB5F8 = {
 			isa = PBXGroup;
 			children = (
-				28100F481F4C2E6A005AB5F8 /* srun-ios */,
-				28100F7A1F4C300B005AB5F8 /* Supporting Files */,
-				1221AE8B68AC71C6605DA6A7 /* Pods */,
+				28100F481F4C2E6A005AB5F8 /* Srun-iOS */,
 				A01D3AC21FD42EEA00DA9C59 /* SrunToday */,
 				A0EBA2271FD4405700A3509B /* SrunKit */,
+				28100F7A1F4C300B005AB5F8 /* Supporting Files */,
+				1221AE8B68AC71C6605DA6A7 /* Pods */,
 				0FEDCB43B3A8B9023C7E8463 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -245,7 +251,7 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		28100F481F4C2E6A005AB5F8 /* srun-ios */ = {
+		28100F481F4C2E6A005AB5F8 /* Srun-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				A02A3B8F1FD438DE00E67F96 /* srun-ios.entitlements */,
@@ -256,9 +262,10 @@
 				2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */,
 				2816F18A1F60D81100B83ABD /* Extensions */,
 				28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */,
+				28100F491F4C2E6A005AB5F8 /* AppDelegate.swift */,
 				28100F531F4C2E6A005AB5F8 /* Assets.xcassets */,
 			);
-			path = "srun-ios";
+			path = "Srun-iOS";
 			sourceTree = "<group>";
 		};
 		28100F601F4C2E6A005AB5F8 /* srun-iosTests */ = {
@@ -286,7 +293,6 @@
 				28100F601F4C2E6A005AB5F8 /* srun-iosTests */,
 				28100F6B1F4C2E6A005AB5F8 /* srun-iosUITests */,
 				28100F471F4C2E6A005AB5F8 /* Products */,
-				28100F491F4C2E6A005AB5F8 /* AppDelegate.swift */,
 				28100F551F4C2E6A005AB5F8 /* LaunchScreen.storyboard */,
 				28100F581F4C2E6A005AB5F8 /* Info.plist */,
 				28100F501F4C2E6A005AB5F8 /* srun_ios.xcdatamodeld */,
@@ -418,9 +424,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A01D3ACE1FD42EEA00DA9C59 /* Build configuration list for PBXNativeTarget "SrunToday" */;
 			buildPhases = (
+				152B9EE6161412E6BC944F11 /* [CP] Check Pods Manifest.lock */,
 				A01D3ABB1FD42EEA00DA9C59 /* Sources */,
 				A01D3ABC1FD42EEA00DA9C59 /* Frameworks */,
 				A01D3ABD1FD42EEA00DA9C59 /* Resources */,
+				73652BA5D76F3444B6FB9453 /* [CP] Copy Pods Resources */,
+				A09C2BF8207F0FC000188442 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -570,6 +579,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		152B9EE6161412E6BC944F11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SrunToday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		17164F8FA89538D2D24C9773 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -636,6 +663,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		73652BA5D76F3444B6FB9453 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SrunToday/Pods-SrunToday-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A00FB2CF207E143E00AA67DD /* Run Fabric Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -644,6 +686,19 @@
 			inputPaths = (
 			);
 			name = "Run Fabric Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 88f6adc93059fa4384a6fb4dd11d5567cefd0718 8337be1dcc8db5f04a3eea93a4dc789fe400efbbcf46ea111ba54adf554b7012";
+		};
+		A09C2BF8207F0FC000188442 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,11 +958,43 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = RHBBUXEY37;
 				INFOPLIST_FILE = "srun-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"Kanna\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"RevealServer\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Legolas.Invoker.srun-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1007,6 +1094,7 @@
 		};
 		A01D3ACC1FD42EEA00DA9C59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FC650DAA1659A63319DFB9 /* Pods-SrunToday.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -1019,6 +1107,7 @@
 				CODE_SIGN_ENTITLEMENTS = SrunToday/SrunToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = RHBBUXEY37;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
@@ -1036,6 +1125,7 @@
 		};
 		A01D3ACD1FD42EEA00DA9C59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A75E83C02E2F327C258DFB /* Pods-SrunToday.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;

@@ -9,12 +9,21 @@
 import UIKit
 import NotificationCenter
 import SrunKit
+import Fabric
+import Crashlytics
+
 class TodayViewController: UIViewController, NCWidgetProviding {
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        Fabric.with([Crashlytics.self])
+        Fabric.sharedSDK().debug = true
     }
     
     @IBOutlet weak var stateLabel: UILabel!
