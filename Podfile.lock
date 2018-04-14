@@ -5,7 +5,7 @@ PODS:
   - Fabric (1.7.5)
   - Kanna (4.0.0)
   - ReachabilitySwift (4.1.0)
-  - Reveal-SDK (13)
+  - Reveal-SDK (14)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -21,7 +21,7 @@ SPEC CHECKSUMS:
   Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
   Kanna: d5ae2a26472f7e7a474e7f36a9cd8aa2c8c63ad3
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
-  Reveal-SDK: ccc2b0f8014965ea448b7534a7c2c8da232b75e8
+  Reveal-SDK: 55b5c5545233b680c2f8da734f202acc15d422b7
 
 PODFILE CHECKSUM: f6bfaf19ae2290a06bf9de4750dc771bdb19a55e
 
