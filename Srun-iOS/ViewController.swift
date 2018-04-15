@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var loginutton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var selfButton: UIButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     var manager : LRSrunManger {
         return LRSrunManger.shared

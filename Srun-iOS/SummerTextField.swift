@@ -10,7 +10,7 @@ import UIKit
 
 class SummerTextField: UITextField {
 
-    let gradientLayer = CAGradientLayer()
+    let lineView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,20 +27,37 @@ class SummerTextField: UITextField {
         layout()
     }
     
+    func defaultRect(original bounds:CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + 5, y: bounds.origin.y, width: bounds.size.width, height: bounds.size.height)
+    }
+    
+    //调整文本框的文本显示、占位符、编辑状态下的内边距
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return defaultRect(original:bounds)
+    }
+    
+    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return defaultRect(original:bounds)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return defaultRect(original:bounds)
+    }
+    
     func setup() {
         textColor = .white
-        layer.cornerRadius = 4
-        layer.masksToBounds = true
-        clipsToBounds = true
+        backgroundColor = .clear
+        borderStyle = .none
+        layer.shadowOpacity = 0.8
+        layer.shadowOffset = CGSize(width: 2, height: 3)
+        layer.shadowColor = UIColor.lrBlack.cgColor
+        layer.masksToBounds = false
         keyboardAppearance = .dark
-        layer.addSublayer(gradientLayer)
-        layout()
-        gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
-        gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)
-        gradientLayer.colors = [RGBCOLOR(r: 70, 75, 80).cgColor, UIColor.lrBlack.cgColor]
+        lineView.backgroundColor = .white
+        addSubview(lineView)
     }
     
     func layout() {
-        gradientLayer.frame = bounds
+        lineView.frame = CGRect(x: bounds.origin.x, y: bounds.origin.y + bounds.size.height-1, width: bounds.size.width, height: 1)
     }
 }
