@@ -8,7 +8,10 @@
 
 import Foundation
 
-
+public struct singleAccount : Codable{
+    public let userName :String
+    public var password : String
+}
 public final class LRSrunManger: NSObject {
     
     
@@ -22,17 +25,30 @@ public final class LRSrunManger: NSObject {
         static let statusURL = "http://202.204.67.15/srun_portal_pc_succeed.php"
     }
     
-    struct userDefaultsKey {
+    public struct userDefaultsKey {
         static let userName = "username"
         static let password = "password"
+        static let accountKey = "accounts"
+    }
+    
+    public var allAccounts: [singleAccount]? {
+        set {
+            defaults.set(try? PropertyListEncoder().encode(newValue!), forKey:userDefaultsKey.accountKey)
+        }
+        get {
+            if let data = defaults.value(forKey:userDefaultsKey.accountKey) as? Data {
+                return try? PropertyListDecoder().decode(Array<singleAccount>.self, from: data)
+            }
+            return nil
+        }
     }
     
     public var defaultPassword : String? {
-        return defaults.value(forKey: userDefaultsKey.password) as? String
+        return allAccounts?.first?.password
     }
     
     public var defaultUserName : String? {
-        return defaults.value(forKey: userDefaultsKey.userName) as? String
+        return allAccounts?.first?.userName
     }
 
     func packingLoginParams(userName:String, password: String) -> [String : Any] {
@@ -52,6 +68,27 @@ public final class LRSrunManger: NSObject {
     var action : String?
     var info : String?
     
+    func appendSingleAccount(someAccount:singleAccount) {
+        if var accounts = self.allAccounts {
+            var flag = false
+            for (index, account) in accounts.enumerated() {
+                if account.userName == someAccount.userName {
+                    accounts.remove(at: index)
+                    accounts.insert(account, at: 0)
+                    accounts[0].password = someAccount.password
+                    self.allAccounts = accounts
+                    flag = true
+                }
+            }
+            if !flag {
+                accounts.insert(someAccount, at: 0)
+                self.allAccounts = accounts
+            }
+        } else {
+            self.allAccounts = [someAccount]
+        }
+    }
+    
     public  func login(userName user:String, password:String, messageHandler:@escaping ((String) -> Void)) {
         let loginPhoneParam = packingLoginParams(userName: user, password: password)
         postRequest(url: urlStrings.logInOutURL, parameters: loginPhoneParam, successHandler: { response in
@@ -62,8 +99,7 @@ public final class LRSrunManger: NSObject {
             self.userIP = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "user_ip", value: "value", html: utf8Text)
             if let _ = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
                 self.status(messageHandler: messageHandler)
-                self.defaults.set(user, forKey: userDefaultsKey.userName)
-                self.defaults.set(password, forKey: userDefaultsKey.password)
+                self.appendSingleAccount(someAccount: singleAccount(userName: user, password: password))
             } else {
                 messageHandler("登录失败")
             }

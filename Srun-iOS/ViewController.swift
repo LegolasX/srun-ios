@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var selfButton: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var moneyButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
     
     var manager : LRSrunManger {
         return LRSrunManger.shared
@@ -37,6 +39,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         userNameLabel.delegate = self
         passwordLabel.delegate = self
+        accountButton.setTitle("▲", for: .normal)
+        accountButton.setTitle("▼", for: .selected)
+        accountButton.setTitle("▼", for: .highlighted)
+        accountButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        accountButton.layer.shadowColor = UIColor.blue.withAlphaComponent(0.8).cgColor
         setupTextFields()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do{
@@ -131,8 +138,36 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    @IBAction func getMoney(_ sender: UIButton) {
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            // Fallback on earlier versions
+        }
+    }
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @IBAction func changeAccount(_ sender: UIButton) {
+        accountButton.isSelected = !accountButton.isSelected
+        guard accountButton.isSelected else { return }
+        let alert = UIAlertController(title: "请选择你的账号", message: nil, preferredStyle: .actionSheet)
+        var accounts = manager.allAccounts!
+        for (index,account) in accounts.enumerated() {
+            let action = UIAlertAction(title: account.userName, style: .default) { (action) in
+                accounts.remove(at: index)
+                accounts.insert(account, at: 0)
+                self.manager.allAccounts = accounts
+                self.userNameLabel.text = account.userName
+                self.passwordLabel.text = account.password
+                self.accountButton.isSelected = !self.accountButton.isSelected
+            }
+            alert.addAction(action)
+        }
+        self.present(alert, animated: true) {
+        }
+        
     }
     
     // MARK: - textField Delegate
