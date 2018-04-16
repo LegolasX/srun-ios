@@ -35,10 +35,16 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     var wifiStatus : Reachability.Connection = .none
     
+    var moneyURL : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.delegate = self
         passwordLabel.delegate = self
+        manager.helperShow { (url, shouldShow) in
+            self.moneyButton.isHidden = !shouldShow
+            self.moneyURL = url
+        }
         accountButton.setTitle("▲", for: .normal)
         accountButton.setTitle("▼", for: .selected)
         accountButton.setTitle("▼", for: .highlighted)
@@ -139,6 +145,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func getMoney(_ sender: UIButton) {
+        if let url = moneyURL {
+            UIApplication.shared.openURL(URL.init(string: url)!)
+        }
         
     }
     @objc func dismissKeyboard() {

@@ -23,6 +23,7 @@ public final class LRSrunManger: NSObject {
     struct urlStrings {
         static let logInOutURL = "http://202.204.67.15/srun_portal_phone.php"
         static let statusURL = "http://202.204.67.15/srun_portal_pc_succeed.php"
+        static let helperURL = "http://140.143.164.218/api/iosInfo"
     }
     
     public struct userDefaultsKey {
@@ -160,6 +161,29 @@ public final class LRSrunManger: NSObject {
             }
         }
     }
+    //TODO:  later!
+    public func helperShow(messageHandler:@escaping ((String,Bool) -> Void)) {
+        getRequest(url: urlStrings.helperURL, parameters: nil) { (response) in
+            guard let data = response.data else { return }
+            if let helper = try? JSONDecoder().decode(Helper.self, from: data) {
+                messageHandler(helper.data.url,helper.data.shouldShow)
+                print(helper)
+            }
+        }
+    }
+
+    struct HelperData : Codable {
+        let shouldShow : Bool
+        let url : String
+    }
+    
+    struct Helper: Codable {
+        let code : Int
+        let data : HelperData
+        let message : String
+    }
+    
+    
     //        let paramPC = ["action" : "login", "username" : "1141250201", "password" : "li777qing", "ac_id" : "1", "user_ip" : "", "nas_ip" : "", "user_mac" : "", "save_me" : "0", "ajax" : "1"]
     //        let pcURL = "http://202.204.67.15/include/auth_action.php"
     
