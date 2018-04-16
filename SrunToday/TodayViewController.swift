@@ -41,7 +41,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     wSelf!.view.layoutIfNeeded()
                 })
             })
-            
+        } else {
+            self.stateLabel.text = "尚无账号"
+            UIView.animate(withDuration: 0.5, animations: {
+                self.view.layoutIfNeeded()
+            })
         }
     }
     @IBAction func logOut(_ sender: UIButton) {

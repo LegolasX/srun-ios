@@ -139,11 +139,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func getMoney(_ sender: UIButton) {
-        if #available(iOS 10.3, *) {
-            SKStoreReviewController.requestReview()
-        } else {
-            // Fallback on earlier versions
-        }
+        
     }
     @objc func dismissKeyboard() {
         view.endEditing(true)
@@ -152,8 +148,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func changeAccount(_ sender: UIButton) {
         accountButton.isSelected = !accountButton.isSelected
         guard accountButton.isSelected else { return }
-        let alert = UIAlertController(title: "请选择你的账号", message: nil, preferredStyle: .actionSheet)
-        var accounts = manager.allAccounts!
+        let alert = UIAlertController(title: "请选择你的账号", message: "成功登陆之后可以保存账户密码", preferredStyle: .actionSheet)
+        var accounts : [singleAccount] = manager.allAccounts ?? []
         for (index,account) in accounts.enumerated() {
             let action = UIAlertAction(title: account.userName, style: .default) { (action) in
                 accounts.remove(at: index)
@@ -165,9 +161,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
             }
             alert.addAction(action)
         }
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { _ in
+            self.accountButton.isSelected = !self.accountButton.isSelected
+        }))
         self.present(alert, animated: true) {
         }
-        
     }
     
     // MARK: - textField Delegate

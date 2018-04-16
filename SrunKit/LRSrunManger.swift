@@ -7,9 +7,9 @@
 //
 
 import Foundation
-
+import StoreKit
 public struct singleAccount : Codable{
-    public let userName :String
+    public let userName : String
     public var password : String
 }
 public final class LRSrunManger: NSObject {
@@ -29,6 +29,7 @@ public final class LRSrunManger: NSObject {
         static let userName = "username"
         static let password = "password"
         static let accountKey = "accounts"
+        static let loginTimeKey = "loginTime"
     }
     
     public var allAccounts: [singleAccount]? {
@@ -49,6 +50,20 @@ public final class LRSrunManger: NSObject {
     
     public var defaultUserName : String? {
         return allAccounts?.first?.userName
+    }
+    
+    var loginSuccessTime : Int {
+        set {
+            if newValue == 10 || newValue == 50 || newValue == 100 || newValue % 500 == 0{
+                if #available(iOSApplicationExtension 10.3, *) {
+                    SKStoreReviewController.requestReview()
+                }
+            }
+            defaults.set(newValue, forKey: userDefaultsKey.loginTimeKey)
+        }
+        get {
+            return defaults.integer(forKey: userDefaultsKey.loginTimeKey)
+        }
     }
 
     func packingLoginParams(userName:String, password: String) -> [String : Any] {
@@ -100,6 +115,7 @@ public final class LRSrunManger: NSObject {
             if let _ = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
                 self.status(messageHandler: messageHandler)
                 self.appendSingleAccount(someAccount: singleAccount(userName: user, password: password))
+                self.loginSuccessTime = self.loginSuccessTime + 1
             } else {
                 messageHandler("登录失败")
             }

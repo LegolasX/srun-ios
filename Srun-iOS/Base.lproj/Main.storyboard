@@ -118,6 +118,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="tdo-kG-xpH" secondAttribute="trailing" constant="70" id="4mL-7s-WYM"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NLz-GC-zZb" secondAttribute="trailing" id="6aV-xi-Qjt"/>
                             <constraint firstItem="Dog-Qm-QFb" firstAttribute="width" secondItem="bRx-bJ-Jkv" secondAttribute="width" id="953-1k-AQI"/>
                             <constraint firstItem="tdo-kG-xpH" firstAttribute="top" secondItem="bkk-9M-bCg" secondAttribute="bottom" priority="250" constant="59" id="HFH-yL-Ny1"/>
                             <constraint firstItem="tdo-kG-xpH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bkk-9M-bCg" secondAttribute="bottom" priority="750" constant="10" id="MsA-oq-zh2"/>
