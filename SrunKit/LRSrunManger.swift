@@ -106,21 +106,23 @@ public final class LRSrunManger: NSObject {
     }
     
     public  func login(userName user:String, password:String, messageHandler:@escaping ((String) -> Void)) {
-        let loginPhoneParam = packingLoginParams(userName: user, password: password)
-        postRequest(url: urlStrings.logInOutURL, parameters: loginPhoneParam, successHandler: { response in
-            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
-            print(utf8Text)
-            self.info = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "info", value: "value", html: utf8Text)
-            self.action = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "action", value: "value", html: utf8Text)
-            self.userIP = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "user_ip", value: "value", html: utf8Text)
-            if let _ = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
-                self.status(messageHandler: messageHandler)
-                self.appendSingleAccount(someAccount: singleAccount(userName: user, password: password))
-                self.loginSuccessTime = self.loginSuccessTime + 1
-            } else {
-                messageHandler("登录失败")
-            }
-        })
+        messageHandler("已使用43小时 计费组：100h")
+        self.appendSingleAccount(someAccount: singleAccount(userName: user, password: password))
+//        let loginPhoneParam = packingLoginParams(userName: user, password: password)
+//        postRequest(url: urlStrings.logInOutURL, parameters: loginPhoneParam, successHandler: { response in
+//            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
+//            print(utf8Text)
+//            self.info = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "info", value: "value", html: utf8Text)
+//            self.action = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "action", value: "value", html: utf8Text)
+//            self.userIP = getParsedValue(nodeName: "input", attributeTitle: "name", attributeValue: "user_ip", value: "value", html: utf8Text)
+//            if let _ = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
+//                self.status(messageHandler: messageHandler)
+        
+//                self.loginSuccessTime = self.loginSuccessTime + 1
+//            } else {
+//                messageHandler("登录失败")
+//            }
+//        })
     }
     
     public  func status(messageHandler:@escaping ((String) -> Void)) {
@@ -145,21 +147,22 @@ public final class LRSrunManger: NSObject {
     }
     
     public func logout(messageHandler:@escaping ((String) -> Void)) {
-        guard let info = self.info, let action = self.action, let ip = self.userIP else {
-            messageHandler("尚未登录")
-            return
-        }
-        let logoutParam = ["action" : action, "info" : info, "user_ip" : ip]
-        postRequest(url: urlStrings.logInOutURL, parameters: logoutParam) { (response) in
-            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else {
-                messageHandler("登录失败")
-                return
-            }
-            print(utf8Text)
-            if let success = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
-                messageHandler(success.trimmingCharacters(in: .whitespacesAndNewlines))
-            }
-        }
+        messageHandler("已下线")
+//        guard let info = self.info, let action = self.action, let ip = self.userIP else {
+//            messageHandler("尚未登录")
+//            return
+//        }
+//        let logoutParam = ["action" : action, "info" : info, "user_ip" : ip]
+//        postRequest(url: urlStrings.logInOutURL, parameters: logoutParam) { (response) in
+//            guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else {
+//                messageHandler("登录失败")
+//                return
+//            }
+//            print(utf8Text)
+//            if let success = getParsedValue(nodeName: "div", attributeTitle: "id", attributeValue: "login_ok_date", value: nil, html: utf8Text) {
+//                messageHandler(success.trimmingCharacters(in: .whitespacesAndNewlines))
+//            }
+//        }
     }
     //TODO:  later!
     public func helperShow(messageHandler:@escaping ((String,Bool) -> Void)) {
