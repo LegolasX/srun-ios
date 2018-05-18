@@ -11,6 +11,7 @@ import WebKit
 import Reachability
 import SrunKit
 class ViewController: UIViewController, UITextFieldDelegate{
+import SafariServices
     
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var userNameLabel: SummerTextField!
@@ -106,8 +107,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
                 self.stateLabel.text = "请输入用户名和密码"
                 return
             }
-            self.manager.login(userName: userName, password: passWord) { stateString in
-                self.stateLabel.text = stateString
+            self.manager.login(userName: userName, password: passWord) { success, resultString in
+                if success {
+                    self.stateLabel.text = resultString
+                } else {
+                    self.openWebView(from: resultString)
+                }
             }
         }
     }
@@ -122,7 +127,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func status(_ sender: UIButton) {
         checkNetworkStatus {
-            self.manager.status{ stateString in
+            self.manager.status{ success, stateString in
                 self.stateLabel.text = stateString
             }
         }
@@ -130,8 +135,15 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func selfLogout(_ sender: GhostButton) {
         checkNetworkStatus {
-            self.performSegue(withIdentifier: "web", sender: sender)
+            let url = URL(string: "http://202.204.67.15:8900")
+            let safariVC = SFSafariViewController(url: url!)
+            self.present(safariVC, animated: true, completion: nil)
         }
+    }
+    
+    func openWebView(from HTMLString:String) {
+        let webVC = webViewController(htmlString:HTMLString)
+        self.navigationController?.pushViewController(webVC, animated: true)
     }
     
     func checkNetworkStatus(performBlock: @escaping (() -> Void)) {
@@ -145,11 +157,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func getMoney(_ sender: UIButton) {
-        if let url = moneyURL {
-            UIApplication.shared.openURL(URL.init(string: url)!)
-        }
-        
+        let url = URL(string: moneyURL ?? "http://oeino.cn/post/5ad40fd6825ccf3095579b44")
+        let safariVC = SFSafariViewController(url: url!)
+        self.present(safariVC, animated: true, completion: nil)
     }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -198,12 +210,5 @@ class ViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
-    //MARK: - segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier, identifier == "web", let vc = segue.destination as? webViewController {
-            vc.password = self.passWord
-            vc.userName = self.userName
-        }
-    }
 }
 

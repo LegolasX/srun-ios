@@ -105,7 +105,7 @@ public final class LRSrunManger: NSObject {
         }
     }
     
-    public  func login(userName user:String, password:String, messageHandler:@escaping ((String) -> Void)) {
+    public  func login(userName user:String, password:String, messageHandler:@escaping ((Bool, String) -> Void)) {
         let loginPhoneParam = packingLoginParams(userName: user, password: password)
         postRequest(url: urlStrings.logInOutURL, parameters: loginPhoneParam, successHandler: { response in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
@@ -118,12 +118,12 @@ public final class LRSrunManger: NSObject {
                 self.appendSingleAccount(someAccount: singleAccount(userName: user, password: password))
                 self.loginSuccessTime = self.loginSuccessTime + 1
             } else {
-                messageHandler("登录失败")
+                messageHandler(false,utf8Text)
             }
         })
     }
     
-    public  func status(messageHandler:@escaping ((String) -> Void)) {
+    public  func status(messageHandler:@escaping ((Bool, String) -> Void)) {
         getRequest(url: urlStrings.statusURL, parameters: nil) { (response) in
             guard let data = response.data, let utf8Text = String(data: data, encoding: .utf8)  else { return }
             print(utf8Text)
@@ -140,7 +140,7 @@ public final class LRSrunManger: NSObject {
             }
             let status = "已使用\(sumSeconds) 计费组：\((userBalance.dropFirst() as NSString).integerValue)"
             print(userBalance,sumSeconds,sumBytes,userName)
-            messageHandler(status)
+            messageHandler(true,status)
         }
     }
     
@@ -166,14 +166,14 @@ public final class LRSrunManger: NSObject {
         getRequest(url: urlStrings.helperURL, parameters: nil) { (response) in
             guard let data = response.data else { return }
             if let helper = try? JSONDecoder().decode(Helper.self, from: data) {
-                messageHandler(helper.data.url,helper.data.shouldShow)
+                messageHandler(helper.data.url,helper.data.shouldHide)
                 print(helper)
             }
         }
     }
 
     struct HelperData : Codable {
-        let shouldShow : Bool
+        let shouldHide : Bool
         let url : String
     }
     
@@ -182,9 +182,4 @@ public final class LRSrunManger: NSObject {
         let data : HelperData
         let message : String
     }
-    
-    
-    //        let paramPC = ["action" : "login", "username" : "1141250201", "password" : "li777qing", "ac_id" : "1", "user_ip" : "", "nas_ip" : "", "user_mac" : "", "save_me" : "0", "ajax" : "1"]
-    //        let pcURL = "http://202.204.67.15/include/auth_action.php"
-    
 }

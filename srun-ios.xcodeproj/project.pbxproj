@@ -16,7 +16,6 @@
 		28100F571F4C2E6A005AB5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28100F551F4C2E6A005AB5F8 /* LaunchScreen.storyboard */; };
 		28100F621F4C2E6A005AB5F8 /* srun_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F611F4C2E6A005AB5F8 /* srun_iosTests.swift */; };
 		28100F6D1F4C2E6A005AB5F8 /* srun_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */; };
-		28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28100F7B1F4E922A005AB5F8 /* webViewController.swift */; };
 		2816F1851F60D25B00B83ABD /* SummerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816F1841F60D25B00B83ABD /* SummerTextField.swift */; };
 		2816F1891F60D80700B83ABD /* MymeriaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816F1881F60D80700B83ABD /* MymeriaExtension.swift */; };
 		2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */; };
@@ -25,6 +24,7 @@
 		2B47F08816D365BFD07C361B /* Pods_SrunToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387D7A34EE6F836DC92C2272 /* Pods_SrunToday.framework */; };
 		331181696928BE25CC3C9255 /* Pods_srun_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E7A6ED11D45AD040F7404B /* Pods_srun_ios.framework */; };
 		A00737352048131D00473842 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00737342048131D00473842 /* SnapshotHelper.swift */; };
+		A00A127820AEA746002E9933 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A127720AEA746002E9933 /* webViewController.swift */; };
 		A01D3AC11FD42EEA00DA9C59 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */; };
 		A01D3AC41FD42EEA00DA9C59 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */; };
 		A01D3AC71FD42EEA00DA9C59 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D3AC51FD42EEA00DA9C59 /* MainInterface.storyboard */; };
@@ -111,7 +111,6 @@
 		28100F681F4C2E6A005AB5F8 /* srun-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "srun-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28100F6C1F4C2E6A005AB5F8 /* srun_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srun_iosUITests.swift; sourceTree = "<group>"; };
 		28100F6E1F4C2E6A005AB5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28100F7B1F4E922A005AB5F8 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		2816F1841F60D25B00B83ABD /* SummerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummerTextField.swift; sourceTree = "<group>"; };
 		2816F1881F60D80700B83ABD /* MymeriaExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MymeriaExtension.swift; sourceTree = "<group>"; };
 		2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostButton.swift; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		91FC5B90FAB9D1012217CEEB /* Pods-srun-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srun-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-srun-ios/Pods-srun-ios.release.xcconfig"; sourceTree = "<group>"; };
 		95A75E83C02E2F327C258DFB /* Pods-SrunToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SrunToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-SrunToday/Pods-SrunToday.release.xcconfig"; sourceTree = "<group>"; };
 		A00737342048131D00473842 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		A00A127720AEA746002E9933 /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		A01D3ABF1FD42EEA00DA9C59 /* SrunToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SrunToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01D3AC01FD42EEA00DA9C59 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A01D3AC31FD42EEA00DA9C59 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -257,11 +257,11 @@
 				A02A3B8F1FD438DE00E67F96 /* srun-ios.entitlements */,
 				28100F4B1F4C2E6A005AB5F8 /* ViewController.swift */,
 				A06B4B4F2063AAFF009DC0DE /* networkHelper.swift */,
-				28100F7B1F4E922A005AB5F8 /* webViewController.swift */,
 				2816F1841F60D25B00B83ABD /* SummerTextField.swift */,
 				2834AC3A1F5E4C4300C5EEC5 /* GhostButton.swift */,
 				2816F18A1F60D81100B83ABD /* Extensions */,
 				28100F4D1F4C2E6A005AB5F8 /* Main.storyboard */,
+				A00A127720AEA746002E9933 /* webViewController.swift */,
 				28100F491F4C2E6A005AB5F8 /* AppDelegate.swift */,
 				28100F531F4C2E6A005AB5F8 /* Assets.xcassets */,
 			);
@@ -741,11 +741,11 @@
 				A06B4B502063AAFF009DC0DE /* networkHelper.swift in Sources */,
 				28100F4C1F4C2E6A005AB5F8 /* ViewController.swift in Sources */,
 				28100F4A1F4C2E6A005AB5F8 /* AppDelegate.swift in Sources */,
+				A00A127820AEA746002E9933 /* webViewController.swift in Sources */,
 				2834AC3F1F5E4E3300C5EEC5 /* QuickMacro.swift in Sources */,
 				2834AC3B1F5E4C4300C5EEC5 /* GhostButton.swift in Sources */,
 				2834AC3D1F5E4C7D00C5EEC5 /* UIColor+Extension.swift in Sources */,
 				28100F521F4C2E6A005AB5F8 /* srun_ios.xcdatamodeld in Sources */,
-				28100F7C1F4E922A005AB5F8 /* webViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

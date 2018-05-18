@@ -35,8 +35,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBAction func logIn(_ sender: UIButton) {
         weak var wSelf = self
         if let pass = manager.defaultPassword, let user = manager.defaultUserName {
-            manager.login(userName: user, password: pass, messageHandler: { message in
-                wSelf!.stateLabel.text = message
+            manager.login(userName: user, password: pass, messageHandler: { [weak self]success, message in
+                if success {
+                    self?.stateLabel.text = message
+                } else {
+                    self?.stateLabel.text = "登录失败，请打开深澜澜以获取更多信息"
+                }
                 UIView.animate(withDuration: 0.5, animations: {
                     wSelf!.view.layoutIfNeeded()
                 })
