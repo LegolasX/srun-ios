@@ -10,8 +10,8 @@ import UIKit
 import WebKit
 import Reachability
 import SrunKit
-class ViewController: UIViewController, UITextFieldDelegate{
 import SafariServices
+class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate{
     
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var userNameLabel: SummerTextField!
@@ -45,6 +45,8 @@ import SafariServices
         manager.helperShow { (url, shouldShow) in
             self.moneyButton.isHidden = !shouldShow
             self.moneyURL = url
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         }
         accountButton.setTitle("▲", for: .normal)
         accountButton.setTitle("▼", for: .selected)
@@ -58,6 +60,13 @@ import SafariServices
         }catch{
             print("could not start reachability notifier")
         }
+    }
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if self.navigationController?.viewControllers.count == 1{
+            return false;
+        }
+        return true;
     }
     
     override func didReceiveMemoryWarning() {
