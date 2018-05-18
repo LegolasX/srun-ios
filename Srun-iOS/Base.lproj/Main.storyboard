@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="386-Ml-51j">
             <objects>
-                <viewController id="zr1-Ax-Jnh" customClass="ViewController" customModule="srun_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainPage" id="zr1-Ax-Jnh" customClass="ViewController" customModule="srun_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ww-0t-V1P"/>
                         <viewControllerLayoutGuide type="bottom" id="GpB-e1-mLD"/>
@@ -28,7 +28,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dog-Qm-QFb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVY-vu-e3M">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVY-vu-e3M">
                                         <rect key="frame" x="332" y="52" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="CYZ-SC-Zk8"/>
@@ -75,31 +75,38 @@
                                 <rect key="frame" x="86" y="424.66666666666674" width="203" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dta-ai-Cw4" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="203" height="38.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="26.666666666666668"/>
                                         <state key="normal" title="时长"/>
                                         <connections>
                                             <action selector="status:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="RnP-jR-WMc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsC-Rb-hvi" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="57.333333333333314" width="203" height="38.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="45.666666666666629" width="203" height="27"/>
                                         <state key="normal" title="上线"/>
                                         <connections>
                                             <action selector="login:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="mpY-AQ-e0f"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhw-xi-Y79" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="114.66666666666669" width="203" height="38"/>
+                                        <rect key="frame" x="0.0" y="91.666666666666686" width="203" height="26.666666666666671"/>
                                         <state key="normal" title="下线"/>
                                         <connections>
                                             <action selector="logout:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="IBe-FH-Ig4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-ip-XCh" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="171.66666666666669" width="203" height="38.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="137.33333333333331" width="203" height="27"/>
                                         <state key="normal" title="自服务下线"/>
                                         <connections>
                                             <action selector="selfLogout:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="3Bd-4U-J7L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk5-ai-a5u" customClass="GhostButton" customModule="srun_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="183.33333333333331" width="203" height="26.666666666666657"/>
+                                        <state key="normal" title="TestTemp"/>
+                                        <connections>
+                                            <action selector="tempTest:" destination="zr1-Ax-Jnh" eventType="touchUpInside" id="0tX-xa-Alq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,14 +151,14 @@
                     <connections>
                         <outlet property="accountButton" destination="NLz-GC-zZb" id="Oya-P5-mRx"/>
                         <outlet property="backgroundImageView" destination="Nq2-6m-zeq" id="Adr-UA-vdO"/>
-                        <outlet property="loginutton" destination="tsC-Rb-hvi" id="8x5-nc-5aE"/>
+                        <outlet property="loginButton" destination="tsC-Rb-hvi" id="8x5-nc-5aE"/>
                         <outlet property="logoutButton" destination="qhw-xi-Y79" id="7M8-ch-seY"/>
                         <outlet property="moneyButton" destination="gVY-vu-e3M" id="UR2-k5-pCe"/>
                         <outlet property="passwordLabel" destination="NUS-LF-W6V" id="mWI-pV-VJL"/>
                         <outlet property="selfButton" destination="WB1-ip-XCh" id="aua-RX-k5a"/>
                         <outlet property="stateLabel" destination="Zhb-sw-gkz" id="FgY-Ru-Lqb"/>
+                        <outlet property="testButton" destination="dk5-ai-a5u" id="eEL-is-Lce"/>
                         <outlet property="userNameLabel" destination="uq4-ab-Ryv" id="UH0-al-n4j"/>
-                        <segue destination="t9a-dv-O8G" kind="show" identifier="web" id="CiW-xV-Ab4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZd-kT-3FC" userLabel="First Responder" sceneMemberID="firstResponder"/>

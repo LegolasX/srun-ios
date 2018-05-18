@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+    <head id="ctl00_Head">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <base href=".">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+		<title>登录</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+			
+		<script language="javascript" src="js/srun_portal.js"></script>
+    <style type="text/css">
+		body{
+			background:url(images/phone1bg_1.png);
+			margin:0 auto;
+			padding:0px 0px;
+			margin:0px 0px;
+			height:500px;
+			}
+    	.form-signin {
+			max-width:330px;
+			padding:15px;
+			margin:0 auto;
+			}
+		input {
+			margin-bottom:8px;
+			}
+		label {
+			margin-left:20px;
+			}
+		.navbar {
+			background-color:#1997ec;
+			text-align:center;
+			margin:0 auto;
+			border-bottom:1px solid #9C0;
+			}
+		.img-responsive {
+			text-align:center;
+			margin:0 auto;
+			}
+		.notice {
+			color:#C00;
+			}
+		.bg {
+			position:absolute;
+			z-index:-1;
+			height:289px;
+			width:280px;
+			bottom:0px;
+			left:0px;
+			background:url(images/phone1bg.png) no-repeat;
+			}
+		label {
+			font-weight:100;
+			padding:5px 5px;
+			}
+		.forget {
+			width:96%;
+			text-align:right;
+			}
+		.forget a {
+			text-decoration:underline;
+			}
+    </style>		
+    </head>
+    <body class="ui-mobile-viewport ui-overlay-b" onkeydown="BindEnter(event)">
+<nav class="navbar">
+	<img src="images/phone1logo.png" width="330" height="110" border="0" />
+</nav>
+<nav class="bg"></nav>
+<div class="container">
+						    	<h5><br/></h5>
+												
+						<form name="form2" method="post" action="srun_portal_phone.php" id="login_form" class="form-signin"  onsubmit="return check(this)">
+						<div style="text-align:center;color:red;font-size:13px;">E2616: Arrearage users.(已欠费)</div>
+						<div style="height:10px;"></div>
+							<input type="hidden" name="action" value="login">
+							<input type="hidden" name="ac_id" value="1">
+							<input type="hidden" name="user_ip" value="">
+							<input type="hidden" name="nas_ip" value="">
+							<input type="hidden" name="user_mac" value="">
+
+							<input id="txtuser" type="name" placeholder="用户名/username" data-theme="c" name="username" tabindex="1" value="1151190228" class="form-control">
+
+							<input id="txtPwd" type="password" placeholder="密码/password" name="password" data-theme="c" tabindex="2" value="yu142227" class="form-control">
+                           	<label class="checkbox">				
+							<input name="save_me" title="记忆密码" type="checkbox" value="1" checked /> 记住密码
+							</label>
+							<input type="submit" class="btn btn-md btn-primary btn-block" value="登录">
+							<div style="height:15px;"></div>
+							<a href="http://202.204.67.15:8900" target="_blank"><input type="button" class="btn btn-md btn-primary btn-block" value="自服务"></a>	
+						</form>
+							
+		
+</div>
+
+    </body>
+</html>

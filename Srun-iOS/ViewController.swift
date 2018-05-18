@@ -16,12 +16,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var userNameLabel: SummerTextField!
     @IBOutlet weak var passwordLabel: SummerTextField!
-    @IBOutlet weak var loginutton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var selfButton: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var moneyButton: UIButton!
     @IBOutlet weak var accountButton: UIButton!
+    @IBOutlet weak var testButton: GhostButton!
     
     var manager : LRSrunManger {
         return LRSrunManger.shared
@@ -37,23 +38,18 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
     var wifiStatus : Reachability.Connection = .none
     
     var moneyURL : String?
-    
+    //#MARK:- life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.delegate = self
         passwordLabel.delegate = self
-        manager.helperShow { (url, shouldShow) in
-            self.moneyButton.isHidden = !shouldShow
-            self.moneyURL = url
         self.navigationController?.isNavigationBarHidden = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        manager.helperShow { [weak self] (url, shouldHide)  in
+            self?.moneyButton.isHidden = shouldHide
+            self?.moneyURL = url
         }
-        accountButton.setTitle("▲", for: .normal)
-        accountButton.setTitle("▼", for: .selected)
-        accountButton.setTitle("▼", for: .highlighted)
-        accountButton.layer.shadowOffset = CGSize(width: 0, height: 2)
-        accountButton.layer.shadowColor = UIColor.blue.withAlphaComponent(0.8).cgColor
-        setupTextFields()
+        setupViews()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do{
             try reachability.startNotifier()
@@ -62,18 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         }
     }
     
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if self.navigationController?.viewControllers.count == 1{
-            return false;
-        }
-        return true;
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func setupTextFields() {
+    func setupViews() {
         userNameLabel.attributedPlaceholder = NSAttributedString.init(string:"学号", attributes: [
             NSAttributedStringKey.foregroundColor:UIColor.white])
         userNameLabel.keyboardType = .numberPad
@@ -87,9 +72,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         passwordLabel.isSecureTextEntry = true
         passwordLabel.text = manager.defaultPassword ?? ""
         userNameLabel.text = manager.defaultUserName ?? ""
+        
+        accountButton.setTitle("▲", for: .normal)
+        accountButton.setTitle("▼", for: .selected)
+        accountButton.setTitle("▼", for: .highlighted)
+        accountButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        accountButton.layer.shadowColor = UIColor.blue.withAlphaComponent(0.8).cgColor
+        #if RELEASE
+        testButton.isHidden = true
+        #endif
     }
-    
-    
+    //#MARK:- non-direct-user actions
     @objc func reachabilityChanged(note: Notification) {
         let reachability = note.object as! Reachability
         switch reachability.connection {
@@ -109,7 +102,26 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         }
     }
     
-    //#MARK: - actions
+    func openWebView(from HTMLString:String) {
+        let webVC = webViewController(htmlString:HTMLString)
+        self.navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    func checkNetworkStatus(performBlock: @escaping (() -> Void)) {
+        if wifiStatus == .wifi {
+            performBlock()
+        } else {
+            let alert = UIAlertController(title: "还是4G呢", message: "先连上校园网", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "麻溜去连", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    //#MARK: - user actions
     @IBAction func login(_ sender: UIButton) {
         checkNetworkStatus {
             guard let userName = self.userName, let passWord = self.passWord else {
@@ -149,19 +161,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
             self.present(safariVC, animated: true, completion: nil)
         }
     }
-    
-    func openWebView(from HTMLString:String) {
-        let webVC = webViewController(htmlString:HTMLString)
-        self.navigationController?.pushViewController(webVC, animated: true)
-    }
-    
-    func checkNetworkStatus(performBlock: @escaping (() -> Void)) {
-        if wifiStatus == .wifi {
-            performBlock()
-        } else {
-            let alert = UIAlertController(title: "还是4G呢", message: "先连上校园网", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "麻溜去连", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+    @IBAction func tempTest(_ sender: UIButton) {
+        if let anotherVC = storyboard?.instantiateViewController(withIdentifier: "mainPage") {
+            self.navigationController?.pushViewController(anotherVC, animated: true)
         }
     }
     
@@ -169,10 +171,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         let url = URL(string: moneyURL ?? "http://oeino.cn/post/5ad40fd6825ccf3095579b44")
         let safariVC = SFSafariViewController(url: url!)
         self.present(safariVC, animated: true, completion: nil)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
     
     @IBAction func changeAccount(_ sender: UIButton) {
@@ -191,6 +189,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
             }
             alert.addAction(action)
         }
+        //这里是为了适配iPad 否则会有崩溃
         if let popoverController = alert.popoverPresentationController {
             popoverController.sourceView = self.view
             popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
@@ -208,7 +207,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if (textField == passwordLabel) {
-            self.login(self.loginutton)
+            self.login(self.loginButton)
         }
         return true
     }
@@ -217,6 +216,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         return true
+    }
+    
+    //#MARK:gesture delegate
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if self.navigationController?.viewControllers.count == 1{
+            return false;
+        }
+        return true;
     }
     
 }
