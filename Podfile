@@ -4,9 +4,10 @@ inhibit_all_warnings!
 
 target ‘srun-ios’ do
     pod 'Reveal-SDK', :configurations => ['Debug']
+    pod 'LifetimeTracker', :configurations => ['Debug']
     pod 'ReachabilitySwift'
     pod 'Fabric'
-	pod 'Crashlytics'
+    pod 'Crashlytics'
 end
 
 target 'SrunKit' do 
